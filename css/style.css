@@ -16,13 +16,22 @@
 }
 
 /* настройки */
+* {
+  margin: 0 auto;
+}
+
 body {
   font-family: "PT Sans Regular";
   font-size: 16px;
 }
 
+.conteiner {
+  max-width: 1160px;
+}
+
 a {
   text-decoration: none;
+  color: white;
 }
 
 ul li {
@@ -30,4 +39,135 @@ ul li {
 }
 
 /* end насройки */
+.header-row__top {
+  background-color: #dd6031;
+}
+
+.header-row__top .conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-row__top .conteiner .top-left, .header-row__top .conteiner .top-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.header-row__top .conteiner .payment, .header-row__top .conteiner .credit {
+  padding: 9px 15px 14px;
+}
+
+.header-row__top .conteiner .location {
+  padding: 9px 35px 14px;
+}
+
+.header-row__top .conteiner .phone {
+  padding: 9px 0px 14px 35px;
+}
+
+.phone {
+  position: relative;
+}
+
+.phone::before {
+  content: url(../img/phone.png);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.header-row__down {
+  -webkit-box-shadow: 0 10px 15px #9b9b9b40;
+          box-shadow: 0 10px 15px #9b9b9b40;
+}
+
+.header-row__down .conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-row__down .logo {
+  padding: 18px 0 0;
+}
+
+.header-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-menu ul li {
+  color: #3d3d3d;
+  padding: 30px 20px 37px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.header-menu ul li:hover {
+  color: #dd6031;
+}
+
+.home::before {
+  content: url(../img/icon1.png);
+  margin: 0 7px;
+}
+
+.catalog::before {
+  content: url(../img/icon2.png);
+  margin: 0 7px;
+}
+
+.about-us::before {
+  content: url(../img/icon4.png);
+  margin: 0 7px;
+}
+
+.contacts::before {
+  content: url(../img/icon3.png);
+  margin: 0 7px;
+}
+
+.request-call {
+  padding: 23px 25px 0;
+}
+
+.request-call button {
+  padding: 6px 31px 8px;
+  font-size: 1em;
+  background-color: white;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  color: #3d3d3d;
+  outline: none;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.request-call button:hover {
+  background-color: #dd6031;
+  color: white;
+}
+
+.cart {
+  padding: 25px 0 0;
+  position: relative;
+}
+
+.cart p {
+  position: absolute;
+  top: 15px;
+  right: -17px;
+  display: inline-block;
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  padding: 3px 8px;
+}
 /*# sourceMappingURL=style.css.map */

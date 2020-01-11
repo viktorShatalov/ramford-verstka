@@ -8,7 +8,5 @@
     display:flex
 } 
 @mixin transition{
-    -webkit-transition:0.5s easy;
-    -o-transition:0.5s easy;
-    transition:0.5s easy;
+    transition:0.7s;
 }

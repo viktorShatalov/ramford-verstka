@@ -5,7 +5,8 @@
 @mixin dspFlex{
     display:-webkit-box;
     display:-ms-flexbox;
-    display:flex
+    display:flex;
+    flex-wrap:wrap;
 } 
 @mixin transition{
     transition:0.7s;

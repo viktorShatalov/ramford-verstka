@@ -29,18 +29,19 @@ ul li{
     .conteiner{
         @include dspFlex;
         justify-content: space-between;
+        flex-wrap: nowrap;
         .top-left,.top-right{
             @include dspFlex;
             margin: 0;
         }
         .payment,.credit{
-            padding: 9px 15px 14px;
+            margin: 8px 17px 14px;
         }
         .location{
-            padding: 9px 35px 14px;
+            margin: 8px 55px 15px;
         }
         .phone{
-            padding: 9px 0px 14px 35px;
+            margin: 9px -15px 14px 32px;
         }
     }
 }
@@ -50,8 +51,8 @@ ul li{
 .phone::before{
     content: url(../img/phone.png);
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: -25px;
+    top: 0px;
 }
 .header-row__down{
     box-shadow: 0 10px 15px #9b9b9b40;
@@ -59,43 +60,51 @@ ul li{
         @include dspFlex;
     }
     .logo{
-        padding: 18px 0 0;
+        padding: 18px ;
+        flex: 1;
     }
 }
 .header-menu{
+    flex: 3;
         ul{
+            padding: 30px 17px 32px;
             @include dspFlex;
+            justify-content: flex-end;
             li{
+                margin: 2px 4px;
+                font-size: 1.125em;
+            }
+            li:nth-child(1)::before{
+                content: url(../img/icon1.png);
+                margin: 0 ;
+            }
+            li:nth-child(2)::before{
+                content: url(../img/icon2.png);
+                margin: 0 7px;
+            }
+            li:nth-child(3)::before{
+                content: url(../img/icon4.png);
+                margin: 0 7px;
+            }
+            li:nth-child(4)::before{
+                content: url(../img/icon3.png);
+                margin: 0 7px;
+            }
+            a{
                 color: $color_text_menu;
-                padding:30px 20px 37px;
                 @include transition;
             }
-            li:hover{
+            a:hover{
                 color: $color_vanilla;
             }
         }
 }
-.home::before{
-    content: url(../img/icon1.png);
-    margin: 0 7px;
-}
-.catalog::before{
-    content: url(../img/icon2.png);
-    margin: 0 7px;
-}
-.about-us::before{
-    content: url(../img/icon4.png);
-    margin: 0 7px;
-}
-.contacts::before{
-    content: url(../img/icon3.png);
-    margin: 0 7px;
-}
 .request-call{
-    padding: 23px 25px 0;
+    padding: 23px 26px 0;
     button{
-        padding: 6px 31px 8px;
-        font-size: 1em;
+        padding: 7px 30px;
+        font-size: 1.125em;
+        width: 100%;
         background-color: $color_white;
         border: 1px solid rgba(177,177,177,100%);
         border-radius: 5px;
@@ -110,17 +119,20 @@ ul li{
     }
 }
 .cart{
-    padding: 25px 0 0;
+    padding: 32px 0px 0;    
     position: relative;
     p{
         position: absolute;
-        top: 15px;
-        right: -17px;
+        top: 22px;
+        right: -16px;
         display: inline-block;
         background-color: #dfdfdf;
         border-radius: 50%;
         padding: 3px 8px;
     }
+}
+main{
+    padding: 20px;
 }
 
 @import './_media';

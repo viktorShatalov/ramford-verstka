@@ -1,8 +1,8 @@
 // slick-slider
-$('.className').slick({
-    autoplay: false,
-    arrows: false,
-});
+// $('.className').slick({
+//     autoplay: false,
+//     arrows: false,
+// });
 // $('.product-slider_items').slick({
 //     autoplay: false,
 //     slidesToShow: 3,

@@ -47,28 +47,34 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .header-row__top .conteiner .top-left, .header-row__top .conteiner .top-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
 }
 
 .header-row__top .conteiner .payment, .header-row__top .conteiner .credit {
-  padding: 9px 15px 14px;
+  margin: 8px 17px 14px;
 }
 
 .header-row__top .conteiner .location {
-  padding: 9px 35px 14px;
+  margin: 8px 55px 15px;
 }
 
 .header-row__top .conteiner .phone {
-  padding: 9px 0px 14px 35px;
+  margin: 9px -15px 14px 32px;
 }
 
 .phone {
@@ -78,8 +84,8 @@ ul li {
 .phone::before {
   content: url(../img/phone.png);
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: -25px;
+  top: 0px;
 }
 
 .header-row__down {
@@ -91,56 +97,78 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header-row__down .logo {
-  padding: 18px 0 0;
+  padding: 18px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.header-menu {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 .header-menu ul {
+  padding: 30px 17px 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .header-menu ul li {
-  color: #3d3d3d;
-  padding: 30px 20px 37px;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  margin: 2px 4px;
+  font-size: 1.125em;
 }
 
-.header-menu ul li:hover {
-  color: #dd6031;
-}
-
-.home::before {
+.header-menu ul li:nth-child(1)::before {
   content: url(../img/icon1.png);
-  margin: 0 7px;
+  margin: 0;
 }
 
-.catalog::before {
+.header-menu ul li:nth-child(2)::before {
   content: url(../img/icon2.png);
   margin: 0 7px;
 }
 
-.about-us::before {
+.header-menu ul li:nth-child(3)::before {
   content: url(../img/icon4.png);
   margin: 0 7px;
 }
 
-.contacts::before {
+.header-menu ul li:nth-child(4)::before {
   content: url(../img/icon3.png);
   margin: 0 7px;
 }
 
+.header-menu ul a {
+  color: #3d3d3d;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.header-menu ul a:hover {
+  color: #dd6031;
+}
+
 .request-call {
-  padding: 23px 25px 0;
+  padding: 23px 26px 0;
 }
 
 .request-call button {
-  padding: 6px 31px 8px;
-  font-size: 1em;
+  padding: 7px 30px;
+  font-size: 1.125em;
+  width: 100%;
   background-color: white;
   border: 1px solid #b1b1b1;
   border-radius: 5px;
@@ -157,17 +185,21 @@ ul li {
 }
 
 .cart {
-  padding: 25px 0 0;
+  padding: 32px 0px 0;
   position: relative;
 }
 
 .cart p {
   position: absolute;
-  top: 15px;
-  right: -17px;
+  top: 22px;
+  right: -16px;
   display: inline-block;
   background-color: #dfdfdf;
   border-radius: 50%;
   padding: 3px 8px;
+}
+
+main {
+  padding: 20px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,44 +1,44 @@
-.header-row__top{
+.re-header-row__top{
     background-color: $color_vanilla;
-    .conteiner{
+    .re-conteiner{
         @include dspFlex;
         justify-content: space-between;
         flex-wrap: nowrap;
-        .top-left,.top-right{
+        .re-top-left,.re-top-right{
             @include dspFlex;
             margin: 0;
         }
-        .payment,.credit{
+        .re-payment,.re-credit{
             margin: 8px 17px 14px;
         }
-        .location{
+        .re-location{
             margin: 8px 55px 15px;
         }
-        .phone{
+        .re-phone{
             margin: 9px -15px 14px 32px;
         }
     }
 }
-.phone{
+.re-phone{
     position: relative;
 }
-.phone::before{
+.re-phone::before{
     content: url(../img/phone.png);
     position: absolute;
     left: -25px;
     top: 0px;
 }
-.header-row__down{
+.re-header-row__down{
     box-shadow: 0 10px 15px #9b9b9b40;
-    .conteiner{
+    .re-conteiner{
         @include dspFlex;
     }
-    .logo{
+    .re-logo{
         padding: 18px ;
         flex: 1;
     }
 }
-.header-menu{
+.re-header-menu{
     flex: 3;
         ul{
             padding: 30px 17px 32px;
@@ -73,7 +73,7 @@
             }
         }
 }
-.request-call{
+.re-request-call{
     padding: 23px 26px 0;
     button{
         padding: 7px 30px;
@@ -92,7 +92,7 @@
         color: $color_white;
     }
 }
-.cart{
+.re-cart{
     padding: 32px 0px 0;    
     position: relative;
     p{

@@ -5,13 +5,17 @@ body{
     font-family:"PT Sans Regular";
     font-size: 16px;
 }
-.conteiner{
+.re-conteiner{
     max-width: $widthContent;
 }
 a{
     text-decoration: none;
     color: $color_white;
 }
-ul li{
-    list-style: none;
+ul{
+    padding: 0;
+    li{
+        list-style: none;
+        
+    }
 }

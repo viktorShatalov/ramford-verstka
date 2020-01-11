@@ -1,138 +1,19 @@
-@import './_fonts';
-@import './_variables';
-@import './_mixin';
-@import './_buttons';
+@import '_fonts';
+@import '_variables';
+@import '_mixin';
+@import '_buttons';
 
 /* настройки */
-*{
-    margin: 0 auto;
-}
-body{
-    font-family:"PT Sans Regular";
-    font-size: 16px;
-}
-.conteiner{
-    max-width: $widthContent;
-}
-a{
-    text-decoration: none;
-    color: $color_white;
-}
-ul li{
-    list-style: none;
-}
-/* end насройки */
+@import '_settings.scss';
 
 // header
-.header-row__top{
-    background-color: $color_vanilla;
-    .conteiner{
-        @include dspFlex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        .top-left,.top-right{
-            @include dspFlex;
-            margin: 0;
-        }
-        .payment,.credit{
-            margin: 8px 17px 14px;
-        }
-        .location{
-            margin: 8px 55px 15px;
-        }
-        .phone{
-            margin: 9px -15px 14px 32px;
-        }
-    }
-}
-.phone{
-    position: relative;
-}
-.phone::before{
-    content: url(../img/phone.png);
-    position: absolute;
-    left: -25px;
-    top: 0px;
-}
-.header-row__down{
-    box-shadow: 0 10px 15px #9b9b9b40;
-    .conteiner{
-        @include dspFlex;
-    }
-    .logo{
-        padding: 18px ;
-        flex: 1;
-    }
-}
-.header-menu{
-    flex: 3;
-        ul{
-            padding: 30px 17px 32px;
-            @include dspFlex;
-            justify-content: flex-end;
-            li{
-                margin: 2px 4px;
-                font-size: 1.125em;
-            }
-            li:nth-child(1)::before{
-                content: url(../img/icon1.png);
-                margin: 0 ;
-            }
-            li:nth-child(2)::before{
-                content: url(../img/icon2.png);
-                margin: 0 7px;
-            }
-            li:nth-child(3)::before{
-                content: url(../img/icon4.png);
-                margin: 0 7px;
-            }
-            li:nth-child(4)::before{
-                content: url(../img/icon3.png);
-                margin: 0 7px;
-            }
-            a{
-                color: $color_text_menu;
-                @include transition;
-            }
-            a:hover{
-                color: $color_vanilla;
-            }
-        }
-}
-.request-call{
-    padding: 23px 26px 0;
-    button{
-        padding: 7px 30px;
-        font-size: 1.125em;
-        width: 100%;
-        background-color: $color_white;
-        border: 1px solid rgba(177,177,177,100%);
-        border-radius: 5px;
-        color: $color_text_menu;
-        outline: none;
-        @include transition;
-        cursor: pointer;
-    }
-    button:hover{
-        background-color:  $color_vanilla;
-        color: $color_white;
-    }
-}
-.cart{
-    padding: 32px 0px 0;    
-    position: relative;
-    p{
-        position: absolute;
-        top: 22px;
-        right: -16px;
-        display: inline-block;
-        background-color: #dfdfdf;
-        border-radius: 50%;
-        padding: 3px 8px;
-    }
-}
-main{
-    padding: 20px;
-}
+@import '_header';
 
-@import './_media';
+// main
+@import '_main.scss';
+
+// footer
+@import '_footer.scss';
+
+// media-query
+@import '_media';

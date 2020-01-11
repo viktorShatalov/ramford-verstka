@@ -38,7 +38,6 @@ ul li {
   list-style: none;
 }
 
-/* end насройки */
 .header-row__top {
   background-color: #dd6031;
 }
@@ -199,7 +198,7 @@ ul li {
   padding: 3px 8px;
 }
 
-main {
+main p {
   padding: 20px;
 }
 /*# sourceMappingURL=style.css.map */

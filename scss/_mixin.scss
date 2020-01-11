@@ -1,0 +1,14 @@
+@mixin dspGrid{
+    display: -ms-grid;
+    display: grid;
+}  
+@mixin dspFlex{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex
+} 
+@mixin transition{
+    -webkit-transition:0.5s easy;
+    -o-transition:0.5s easy;
+    transition:0.5s easy;
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'PT Sans Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("../fonts/PT_Sans_regular.woff") format("woff"), url("../fonts/PT_Sans_regular.ttf") format("truetype"), url("../fonts/PT_Sans_regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'PT Sans Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-display: auto;
+  src: url("../fonts/PT_Sans_bold.woff") format("woff"), url("../fonts/PT_Sans_bold.ttf") format("truetype"), url("../fonts/PT_Sans_bold.otf") format("opentype");
+}
+
+/* настройки */
+body {
+  font-family: "PT Sans Regular";
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* end насройки */
+/*# sourceMappingURL=style.css.map */

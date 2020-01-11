@@ -1,0 +1,24 @@
+@import './_fonts';
+@import './_variables';
+@import './_mixin';
+@import './_buttons';
+
+/* настройки */
+body{
+    font-family:"PT Sans Regular";
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+/* end насройки */
+
+// header
+header{
+  
+}
+
+@import './_media';

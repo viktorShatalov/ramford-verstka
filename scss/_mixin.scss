@@ -11,3 +11,16 @@
 @mixin transition{
     transition:0.7s;
 }
+@mixin button{
+    background-color: $color_white;
+    border: 1px solid rgba(177,177,177,100%);
+    border-radius: 5px;
+    color: $color_text_menu;
+    outline: none;
+    @include transition;
+    cursor: pointer;
+}
+@mixin button_hover{
+    background-color:  $color_vanilla;
+    color: $color_white;
+}

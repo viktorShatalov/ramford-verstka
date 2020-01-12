@@ -13,14 +13,12 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-    <!-- jqery -->
-    <script src="js/jquery/jquery.min.js"></script>
     <!-- скрипт определения города -->
-    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
+        type="text/javascript"></script>
     <script type="text/javascript">
         window.onload = function () {
             $("#user-city,#user-city2").text(ymaps.geolocation.city);
-            console.log(ymaps);
             $('.re-unswer a').click(function () {
                 $('.re-question').toggleClass('active');
             });
@@ -106,7 +104,59 @@
 
     <!-- main content -->
     <main class="re-main">
-
+        <section class="re-info-block">
+            <div class="re-conteiner">
+                <div class="re-info-left">
+                    <div class="re-counter">
+                        <div class="re-counter-title">
+                            <h2>Только 3 дня!</h2>
+                            <p>Бесплатная доставка по РФ</p>
+                        </div>
+                        <div class="re-counter-timer">
+                            <div class="re-timer_day">
+                                <span>02</span>
+                                <p>дней</p>
+                            </div>
+                            <div class="re-timer_hour">
+                                <span>23</span>
+                                <p>часов</p>
+                            </div>
+                            <div class="re-timer_minut">
+                                <span>59</span>
+                                <p>минут</p>
+                            </div>
+                            <div class="re-timer_second">
+                                <span>59</span>
+                                <p>секунд</span>
+                            </div>
+                        </div>
+                        <div class="re-cunter-text">
+                            <p>Возникли трудности<br> с выбором камина или печи?</p>
+                        </div>
+                        <form class="re-counter-form">
+                            <input type="tel" name="tel" placeholder="Телефон">
+                            <button>Получить консультацию</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="re-info-right">
+                    <div class="re-info-slider">
+                        <div class="re-slider-item">
+                            <img src="img/slider-Kamin.png" alt="img">
+                        </div>
+                        <div class="re-slider-item">
+                            <img src="img/slider-Kamin.png" alt="img">
+                        </div>
+                        <div class="re-slider-item">
+                            <img src="img/slider-Kamin.png" alt="img">
+                        </div>
+                        <div class="re-slider-item">
+                            <img src="img/slider-Kamin.png" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- footer -->
@@ -215,7 +265,7 @@
         </div>
     </footer>
 
-
+    <script src="js/jquery/jquery.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>

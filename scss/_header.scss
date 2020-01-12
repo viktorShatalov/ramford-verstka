@@ -73,6 +73,7 @@
     top: 0px;
 }
 .re-header-row__down{
+    background-color: $color_white;
     box-shadow: 0 10px 15px #9b9b9b40;
     .re-conteiner{
         @include dspFlex;
@@ -123,17 +124,10 @@
         padding: 7px 30px;
         font-size: 1.125em;
         width: 100%;
-        background-color: $color_white;
-        border: 1px solid rgba(177,177,177,100%);
-        border-radius: 5px;
-        color: $color_text_menu;
-        outline: none;
-        @include transition;
-        cursor: pointer;
+        @include button;
     }
     button:hover{
-        background-color:  $color_vanilla;
-        color: $color_white;
+        @include button_hover;
     }
 }
 .re-cart{

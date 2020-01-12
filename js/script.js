@@ -1,47 +1,10 @@
 // slick-slider
-// $('.className').slick({
-//     autoplay: false,
-//     arrows: false,
-// });
-// $('.product-slider_items').slick({
-//     autoplay: false,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     responsive: [
-//         {
-//             breakpoint: 768,
-//             settings: {
-//                 slidesToShow: 3,
-//                 slidesToScroll: 1,
-//                 arrows: false,
-//             }
-//         },
-//         {
-//             breakpoint: 420,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 arrows: false,
-//             }
-//         },
-//         {
-//             breakpoint: 375,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 arrows: false,
-//             }
-//         },
-//         {
-//             breakpoint: 320,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 arrows: false,
-//             }
-//         }
-//     ]
-// });
+$('.re-info-slider').slick({
+    autoplay: false,
+    arrows: false,
+    dots:true,
+});
+
 
 // menu -mobile
 // $(document).ready(function () {

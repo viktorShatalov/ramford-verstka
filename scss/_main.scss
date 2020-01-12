@@ -1,6 +1,78 @@
-main{
-    height: 699.3vh;
+.re-info-block{
+    .re-conteiner{
+        @include dspFlex;
+        margin: 22px auto;
+        .re-info-left{
+            box-shadow: 0 0.8px 3px $color_box-shadow;
+            width: 240px;
+            background-color: $color_white;
+            border-radius: 10px;
+            padding: 24px 26px;
+        }
+        .re-info-right{
+            margin: 0;
+            box-shadow: 0 0.8px 3px $color_box-shadow;
+        }
+    }
+}
+.re-counter-title{
+    h2{
+        margin: 0 0 13px;
+    }
     p{
-        padding: 20px;
+        font-size: 1.1em;
+        color: $color_vanilla;
+        margin: 0 0 0 -2px;
+    }
+}
+.re-counter-timer{
+    @include dspFlex;
+    flex-wrap: nowrap;
+    margin: 32px 0 23px;
+    span{
+        font-size: 1.6em;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 5px;
+        background-color: $color_yellow;
+    }
+    p{
+        font-size: 0.75em;
+        margin: 11px 0 0 10px;
+
+    }
+}
+.re-cunter-text{
+    margin: 0px 0 23px -2px;
+    p{
+        font-size: 1.1em;
+        color: $color_footer-row;
+    }
+}
+.re-counter-form{
+    margin: 0px 0 0 -3px;
+    input{
+        width: 228px;
+        border: 1px solid $color_vanilla;
+        border-radius: 5px;
+        padding: 11px 0 11px 11px;
+        margin: 0 0 18px;
+    }
+    button{
+        @include button;
+        padding: 11px 0;
+        width: 241px;
+    }
+    button:hover{
+        @include button_hover;
+    }
+}
+
+.re-info-slider{
+    max-width: 830px;
+    .re-slider-item{
+        img{
+            max-width: 830px;
+        }
     }
 }

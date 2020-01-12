@@ -23,6 +23,7 @@
 body {
   font-family: "PT Sans Regular";
   font-size: 16px;
+  background-color: #f6f6f6;
 }
 
 .re-conteiner {
@@ -145,6 +146,7 @@ ul li {
 }
 
 .re-header-row__down {
+  background-color: white;
   -webkit-box-shadow: 0 10px 15px #9b9b9b40;
           box-shadow: 0 10px 15px #9b9b9b40;
 }
@@ -255,12 +257,109 @@ ul li {
   padding: 3px 8px;
 }
 
-main {
-  height: 699.3vh;
+.re-info-block .re-conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 22px auto;
 }
 
-main p {
-  padding: 20px;
+.re-info-block .re-conteiner .re-info-left {
+  -webkit-box-shadow: 0 0.8px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.8px 3px rgba(0, 0, 0, 0.2);
+  width: 240px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 24px 26px;
+}
+
+.re-info-block .re-conteiner .re-info-right {
+  margin: 0;
+  -webkit-box-shadow: 0 0.8px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.8px 3px rgba(0, 0, 0, 0.2);
+}
+
+.re-counter-title h2 {
+  margin: 0 0 13px;
+}
+
+.re-counter-title p {
+  font-size: 1.1em;
+  color: #dd6031;
+  margin: 0 0 0 -2px;
+}
+
+.re-counter-timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 32px 0 23px;
+}
+
+.re-counter-timer span {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #ffa200;
+}
+
+.re-counter-timer p {
+  font-size: 0.75em;
+  margin: 11px 0 0 10px;
+}
+
+.re-cunter-text {
+  margin: 0px 0 23px -2px;
+}
+
+.re-cunter-text p {
+  font-size: 1.1em;
+  color: #707070;
+}
+
+.re-counter-form {
+  margin: 0px 0 0 -3px;
+}
+
+.re-counter-form input {
+  width: 228px;
+  border: 1px solid #dd6031;
+  border-radius: 5px;
+  padding: 11px 0 11px 11px;
+  margin: 0 0 18px;
+}
+
+.re-counter-form button {
+  background-color: white;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  color: #3d3d3d;
+  outline: none;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  cursor: pointer;
+  padding: 11px 0;
+  width: 241px;
+}
+
+.re-counter-form button:hover {
+  background-color: #dd6031;
+  color: white;
+}
+
+.re-info-slider {
+  max-width: 830px;
+}
+
+.re-info-slider .re-slider-item img {
+  max-width: 830px;
 }
 
 footer {

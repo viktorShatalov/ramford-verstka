@@ -16,13 +16,13 @@
     <!-- jqery -->
     <script src="js/jquery/jquery.min.js"></script>
     <!-- скрипт определения города -->
-    <script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
     <script type="text/javascript">
         window.onload = function () {
             $("#user-city,#user-city2").text(ymaps.geolocation.city);
             $('#user-city').click(function () {
-                $('#user-city').toggleClass('active');
-            })
+                $('#user-city a').toggleClass('active');
+            });
         }
     </script>
 </head>
@@ -49,7 +49,7 @@
                         <div class="re-location">
                             <p id="user-city"></p>
                             <p class="re-question">
-                                Ваш город 
+                                Ваш город
                                 <span id="user-city2"></span>
                                 ?
                                 <span>

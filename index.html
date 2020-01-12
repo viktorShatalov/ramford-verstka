@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>verstka-cofe_machine</title>
+    <!-- стили -->
     <link rel="icon" type="image/png" href="">
     <link rel="stylesheet" href="js/slick/slick.css">
     <link rel="stylesheet" href="js/slick/slick-theme.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <!-- jqery -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <!-- скрипт определения города -->
+    <script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            $("#user-city,#user-city2").text(ymaps.geolocation.city);
+            $('#user-city').click(function () {
+                $('#user-city').toggleClass('active');
+            })
+        }
+    </script>
 </head>
 
 <body>
@@ -34,9 +47,16 @@
                     </div>
                     <div class="re-top-right">
                         <div class="re-location">
-                            <a href="#">
-                                <p>Екатеринбург</p>
-                            </a>
+                            <p id="user-city"></p>
+                            <p class="re-question">
+                                Ваш город 
+                                <span id="user-city2"></span>
+                                ?
+                                <span>
+                                    <a href="#">Да</a>
+                                    <a href="#">Нет</a>
+                                </span>
+                            </p>
                         </div>
                         <div class="re-phone">
                             <a href="tel:8 800 505-61-36">
@@ -85,70 +105,7 @@
 
     <!-- main content -->
     <main class="re-main">
-        <p>
 
-            Necessitatibus rerum non saepe illo odit tempora molestias, magnam totam repellendus omnis iure veritatis
-            neque cumque inventore repellat. Quam in ullam eius quas neque vel natus sapiente sequi quae impedit.
-            Error, est excepturi. Tempore dolor ad eum ipsum temporibus rem quae. Sit cupiditate doloremque ad error
-            asperiores veniam iusto, et, veritatis qui, sed impedit at dolore placeat quas dolorem tempora.
-            Consequuntur mollitia maxime sunt quibusdam, ex sequi numquam impedit quis quam ut suscipit fuga beatae
-            animi aut, tempora saepe aperiam quo, fugit reprehenderit autem debitis quia quos! Quia, consequuntur nulla?
-            Eius vel ipsum optio consectetur autem neque illum distinctio quos? Laborum blanditiis commodi ab illum
-            ipsam vero quia libero adipisci excepturi corporis. Tempora magnam obcaecati maxime sunt blanditiis,
-            corrupti repellat!
-            Incidunt, velit veritatis rerum iure inventore recusandae repudiandae dignissimos accusantium consequatur
-            dicta necessitatibus autem cupiditate, modi nam qui animi deleniti ut totam! Eaque officiis, expedita magnam
-            quisquam obcaecati numquam dolorem!
-            Quisquam, magnam nulla? Unde excepturi a aspernatur tempore maxime consequuntur quod earum exercitationem,
-            aperiam, deleniti libero officiis dolorem, aliquid iure? Iure praesentium expedita ducimus debitis, vitae
-            illum odit dolores rerum?
-            Dolores fuga natus in, iusto delectus doloribus exercitationem itaque sunt fugit consequuntur labore eveniet
-            inventore hic nisi libero! Modi, nostrum perspiciatis sit beatae atque facere optio voluptas deleniti cum
-            repellat!
-            Consequuntur sed asperiores suscipit quae, eos dolorum consectetur est sapiente maiores itaque placeat
-            dignissimos explicabo consequatur sunt deserunt, fugit non nisi. Dolorum qui quo, quibusdam ducimus a
-            suscipit iure velit.
-            Impedit maiores excepturi possimus cupiditate dolores assumenda pariatur veritatis necessitatibus alias?
-            Officiis tempora fuga iure quia voluptatum, culpa ex. Ea magni nihil harum natus praesentium, omnis id
-            quisquam illo porro.
-            Et in quas enim perspiciatis voluptatum temporibus officia ullam, sed eum porro sapiente sunt optio rem
-            eaque quasi dolorum nisi non reprehenderit repellat voluptas labore quod. Veniam suscipit reprehenderit
-            eveniet.
-            Corrupti debitis delectus laborum neque maxime sed repellendus inventore autem quia iure alias itaque eum
-            necessitatibus quisquam unde veniam totam deleniti, ad nisi aut explicabo sunt quae dicta. Sit, asperiores?
-            Molestias pariatur, natus iusto aspernatur deserunt tempore consectetur velit voluptatem reiciendis repellat
-            doloribus animi quaerat. Tempora distinctio expedita explicabo corrupti, molestias velit voluptatum
-            possimus? Optio quaerat corrupti labore nobis sunt.
-            Corporis perferendis laboriosam architecto, amet at modi eius, neque officia ab beatae autem aperiam illo
-            quia pariatur dicta in distinctio? Laboriosam atque dolorem eaque quod ipsum facere ut dolore porro.
-            Placeat magni recusandae blanditiis quibusdam alias! Eos quo et tempora voluptas facere? Magni quibusdam,
-            perferendis doloribus tenetur impedit, reprehenderit, dicta veritatis ullam cumque modi optio a voluptates
-            provident in! Repudiandae!
-            Beatae saepe ex porro amet ipsam officiis harum. Eos harum veritatis iste, voluptas nulla laborum quod quas,
-            deleniti incidunt ea debitis, molestiae ratione excepturi tenetur adipisci et impedit? Ipsum, assumenda.
-            Consectetur, animi? Harum nisi similique laboriosam sed perferendis culpa doloribus incidunt aperiam neque
-            amet, beatae ipsa? Magni provident similique unde vel dolorem ex omnis dicta atque eaque, labore officia
-            quibusdam.
-            Praesentium, vero? Sit veniam rem ipsum eum eaque omnis, officiis incidunt architecto ad quos earum fugit
-            iure iusto voluptate tempore maiores perferendis odit totam optio eligendi ex numquam corrupti? Impedit.
-            At, quasi aliquid soluta, temporibus eius repellat officiis cumque suscipit maiores, iste quam! Iusto
-            beatae, nihil adipisci incidunt harum eius veniam, quis provident perspiciatis nemo sit minus voluptate
-            ullam blanditiis.
-            Sed repellat ea, fugit facere qui vitae consectetur nostrum nihil error velit ducimus accusamus et
-            cupiditate nobis amet quasi architecto itaque eius labore, harum autem libero! Eaque corporis autem iste!
-            Libero minima, illum sint dolorum excepturi, dolor delectus itaque iusto fugiat amet eligendi deleniti, odit
-            aliquam. Voluptas debitis, ipsam enim alias aliquam asperiores sequi accusamus aspernatur dolorem, delectus
-            excepturi adipisci.
-            Laudantium optio quibusdam officia voluptatibus odio repellendus perspiciatis eaque dolor eligendi possimus
-            recusandae praesentium animi esse, eum vel iusto autem explicabo earum. Tempore sed assumenda, fugit
-            praesentium recusandae nulla eveniet.
-            Itaque aspernatur cupiditate soluta asperiores similique delectus libero rerum beatae sunt sit quidem
-            dignissimos quis unde cum fugit, provident recusandae placeat veniam consectetur? Rem consequatur minima
-            nemo nesciunt? Distinctio, ducimus.
-            Facilis reiciendis non velit excepturi consectetur voluptate hic recusandae vel ipsum cumque itaque odio
-            sunt consequuntur labore amet officia tempora quasi dicta optio culpa quam illum, nobis repudiandae? Ex,
-            neque.
-        </p>
     </main>
 
     <!-- footer -->
@@ -162,7 +119,7 @@
                     <div class="re-top-right">
                         <div class="re-location">
                             <a href="#">
-                                <p>Екатеринбург</p>
+                                <p id="user-city"></p>
                             </a>
                         </div>
                         <div class="re-phone">
@@ -175,7 +132,8 @@
                 <div class="re-footer-row__center">
                     <div class="re-footer-menu">
                         <nav class="re-menu-column__left">
-                            <ul>Каталог
+                            <h3>Каталог</h3>
+                            <ul>
                                 <li>
                                     <a href="#">Электрокамины</a>
                                 </li>
@@ -203,7 +161,8 @@
                             </ul>
                         </nav>
                         <nav class="re-menu-column__center">
-                            <ul>Меню
+                            <h3>Меню</h3>
+                            <ul>
                                 <li>
                                     <a href="#"> Главная</a>
                                 </li>
@@ -219,7 +178,8 @@
                             </ul>
                         </nav>
                         <nav class="re-menu-column__right">
-                            <ul>Покупателям
+                            <h3>Покупателям</h3>
+                            <ul>
                                 <li>
                                     <a href="#">Доставка и оплата</a>
                                 </li>
@@ -254,7 +214,7 @@
         </div>
     </footer>
 
-    <script src="js/jquery/jquery.min.js"></script>
+
     <script src="js/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>

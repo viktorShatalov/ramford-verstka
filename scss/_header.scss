@@ -11,13 +11,55 @@
         .re-payment,.re-credit{
             margin: 8px 17px 14px;
         }
-        .re-location{
-            margin: 8px 55px 15px;
-        }
         .re-phone{
             margin: 9px -15px 14px 32px;
         }
     }
+}
+.re-location{
+    position: relative;
+    margin: 8px 55px 15px;
+    color: $color_white;
+    .re-question{
+        width: 290px;
+        display: flex;
+        position: absolute;
+        top: 40px;
+        left: -140px;
+        background-color: $color_location-modal;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.16);
+        border-radius: 15px;
+        color: rgba(28,28,28,100);
+        transition: .2s;
+        padding: 25px 15px 25px 20px;
+        z-index: 3;
+        #user-city2{
+            font-weight: bold;
+            margin: 0px 0 0 8px;
+        }
+        a{
+            color: rgba(0,111,255,100);
+            font-weight: normal;
+            padding: 0 5px;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    .re-question:active{
+        display: none;
+    }
+}
+.re-question::before{
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 45%;
+    border: 20px solid transparent;
+    border-bottom: 20px solid $color_location-modal;
+    display: block;
+    width: 0;
+    height: 0;
 }
 .re-phone{
     position: relative;

@@ -22,7 +22,6 @@
     color: $color_white;
     .re-question{
         width: 290px;
-        display: flex;
         position: absolute;
         top: 40px;
         left: -140px;
@@ -37,6 +36,9 @@
             font-weight: bold;
             margin: 0px 0 0 8px;
         }
+        .re-unswer{
+            padding: 0 0 0 55px;
+        }
         a{
             color: rgba(0,111,255,100);
             font-weight: normal;
@@ -46,7 +48,7 @@
             text-decoration: underline;
         }
     }
-    .re-question:active{
+    .active{
         display: none;
     }
 }

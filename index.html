@@ -20,8 +20,9 @@
     <script type="text/javascript">
         window.onload = function () {
             $("#user-city,#user-city2").text(ymaps.geolocation.city);
-            $('#user-city').click(function () {
-                $('#user-city a').toggleClass('active');
+            console.log(ymaps);
+            $('.re-unswer a').click(function () {
+                $('.re-question').toggleClass('active');
             });
         }
     </script>
@@ -52,7 +53,7 @@
                                 Ваш город
                                 <span id="user-city2"></span>
                                 ?
-                                <span>
+                                <span class="re-unswer">
                                     <a href="#">Да</a>
                                     <a href="#">Нет</a>
                                 </span>

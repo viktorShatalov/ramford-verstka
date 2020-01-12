@@ -84,9 +84,6 @@ ul li {
 
 .re-location .re-question {
   width: 290px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: absolute;
   top: 40px;
   left: -140px;
@@ -106,6 +103,10 @@ ul li {
   margin: 0px 0 0 8px;
 }
 
+.re-location .re-question .re-unswer {
+  padding: 0 0 0 55px;
+}
+
 .re-location .re-question a {
   color: #006fff;
   font-weight: normal;
@@ -116,7 +117,7 @@ ul li {
   text-decoration: underline;
 }
 
-.re-location .re-question:active {
+.re-location .active {
   display: none;
 }
 

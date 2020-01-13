@@ -254,6 +254,7 @@ ul li {
 .re-request-call button:hover {
   background-color: #dd6031;
   color: white;
+  border: 1px solid transparent;
 }
 
 .re-cart {
@@ -366,6 +367,7 @@ ul li {
 .re-counter-form button:hover {
   background-color: #dd6031;
   color: white;
+  border: 1px solid transparent;
 }
 
 .re-info-slider {
@@ -630,6 +632,7 @@ ul li {
 .re-currentOffers-right__btn button:hover {
   background-color: #dd6031;
   color: white;
+  border: 1px solid transparent;
 }
 
 /* section-newProduct */

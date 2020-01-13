@@ -23,6 +23,7 @@
 @mixin button_hover{
     background-color:  $color_vanilla;
     color: $color_white;
+    border: 1px solid transparent;
 }
 @mixin background {
     background-color: $color_white;

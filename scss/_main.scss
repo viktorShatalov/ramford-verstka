@@ -185,7 +185,6 @@
     }
     .re-slider-item:hover .re-item-action__btn button{
         @include button_hover;
-        border: 1px solid transparent;
     }
     .re-item-description{
         margin: 0 0 45px;
@@ -300,7 +299,6 @@
     }
     .re-item:hover .re-item-action__btn button{
         @include button_hover;
-        border: 1px solid transparent;
     }
     .re-item-description{
         margin: 0 0 45px;

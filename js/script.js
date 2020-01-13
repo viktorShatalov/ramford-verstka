@@ -1,8 +1,29 @@
 // slick-slider
 $('.re-info-slider').slick({
     autoplay: false,
+    infinite: true,
     arrows: false,
-    dots:true,
+    dots: true,
+});
+
+$('.re-currentOffers-slider').slick({
+    autoplay: false,
+    infinite: true,
+    arrows: true,
+    dots: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // responsive: [
+    //     {
+    //       breakpoint: 1360,
+    //       settings: {
+    //         slidesToShow: 4,
+    //         slidesToScroll: 4,
+    //         infinite: true,
+    //         dots: true
+    //       }
+    //     },
+    //   ]
 });
 
 

@@ -16,6 +16,18 @@
         }
     }
 }
+#user-city{
+    position: relative;
+}
+#user-city::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 4px;
+    width: 7px;
+    height: 10px;
+    border: 1px solid $color_white;
+}
 .re-location{
     position: relative;
     margin: 8px 55px 15px;

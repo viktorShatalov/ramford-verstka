@@ -23,7 +23,7 @@
     line-height: 0;
 
     position: absolute;
-    top: 50%;
+    top: 38%;
 
     display: block;
 
@@ -40,6 +40,7 @@
     border: none;
     outline: none;
     background: transparent;
+    z-index: 3;
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -81,7 +82,7 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: -42px;
 }
 [dir='rtl'] .slick-prev
 {
@@ -90,7 +91,7 @@
 }
 .slick-prev:before
 {
-    content: url(../img/prev.png);
+    content: url(../../img/slick-prev.png);
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -99,7 +100,7 @@
 
 .slick-next
 {
-    right: -25px;
+    right: -42px;
 }
 [dir='rtl'] .slick-next
 {
@@ -108,7 +109,7 @@
 }
 .slick-next:before
 {
-    content: url(../img/next.png);
+    content: url(../../img/slick-next.png);
 }
 [dir='rtl'] .slick-next:before
 {

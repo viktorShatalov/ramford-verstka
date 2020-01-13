@@ -15,7 +15,7 @@
   src: url("../fonts/PT_Sans_bold.woff") format("woff"), url("../fonts/PT_Sans_bold.ttf") format("truetype"), url("../fonts/PT_Sans_bold.otf") format("opentype");
 }
 
-/* настройки */
+/* общие настройки */
 * {
   margin: 0 auto;
 }
@@ -75,6 +75,20 @@ ul li {
 
 .re-header-row__top .re-conteiner .re-phone {
   margin: 9px -15px 14px 32px;
+}
+
+#user-city {
+  position: relative;
+}
+
+#user-city::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 4px;
+  width: 7px;
+  height: 10px;
+  border: 1px solid white;
 }
 
 .re-location {
@@ -211,8 +225,8 @@ ul li {
 
 .re-header-menu ul a {
   color: #3d3d3d;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .re-header-menu ul a:hover {
@@ -232,8 +246,8 @@ ul li {
   border-radius: 5px;
   color: #3d3d3d;
   outline: none;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   cursor: pointer;
 }
 
@@ -257,6 +271,7 @@ ul li {
   padding: 3px 8px;
 }
 
+/* info-section */
 .re-info-block .re-conteiner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -267,18 +282,17 @@ ul li {
 }
 
 .re-info-block .re-conteiner .re-info-left {
-  -webkit-box-shadow: 0 0.8px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0.8px 3px rgba(0, 0, 0, 0.2);
-  width: 240px;
+  width: 235px;
   background-color: white;
   border-radius: 10px;
-  padding: 24px 26px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 24px 30px;
+  margin: 0 28px 0 0;
 }
 
 .re-info-block .re-conteiner .re-info-right {
   margin: 0;
-  -webkit-box-shadow: 0 0.8px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0.8px 3px rgba(0, 0, 0, 0.2);
 }
 
 .re-counter-title h2 {
@@ -321,7 +335,7 @@ ul li {
 
 .re-cunter-text p {
   font-size: 1.1em;
-  color: #707070;
+  color: #7e7e7e;
 }
 
 .re-counter-form {
@@ -342,8 +356,8 @@ ul li {
   border-radius: 5px;
   color: #3d3d3d;
   outline: none;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   cursor: pointer;
   padding: 11px 0;
   width: 241px;
@@ -355,11 +369,212 @@ ul li {
 }
 
 .re-info-slider {
-  max-width: 830px;
+  max-width: 839px;
+  margin: 0 -14px 0 0;
 }
 
 .re-info-slider .re-slider-item img {
-  max-width: 830px;
+  max-width: 839px;
+}
+
+/* subMenu-section */
+.re-subMenu .re-conteiner {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 40px auto;
+}
+
+.re-subMenu-navigation {
+  padding: 46px 0 0 40px;
+}
+
+.re-subMenu-navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.re-subMenu-navigation ul li {
+  width: 205px;
+  margin: 0 15px 30px 0;
+}
+
+.re-navigation-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.re-navigation-item .item-img {
+  margin: 0 9px 0 0;
+}
+
+.re-navigation-item .re-item-description {
+  margin: 0;
+}
+
+.re-navigation-item .re-item-description p {
+  color: #3d3d3d;
+  font-size: 1.125em;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.re-navigation-item .re-item-description p:hover {
+  color: #dd6031;
+}
+
+.re-navigation-item .re-item-description span {
+  color: #7e7e7e;
+  font-size: 0.9375em;
+}
+
+/* section current offers */
+.re-currentOffers .re-currentOffers-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 44px auto;
+}
+
+.re-currentOffers-left {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
+  margin: 0 37px 0 0;
+}
+
+.re-currentOffers-left .re-currentOffers-left__title {
+  margin: 0 0 0 30px;
+}
+
+.re-currentOffers-left .re-currentOffers-left__title h2 {
+  position: relative;
+  margin: 0 0 33px 0;
+}
+
+.re-currentOffers-left .re-currentOffers-left__title h2::after {
+  content: 'Хиты!';
+  background-color: #dd6031;
+  font-size: .5em;
+  color: white;
+  font-weight: normal;
+  padding: 4px 7px;
+  position: absolute;
+  top: 3px;
+  margin: 0 0 0 15px;
+}
+
+.re-currentOffers-left::before,
+.re-currentOffers-left::after {
+  content: '';
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  top: 43%;
+  background-color: white;
+}
+
+.re-currentOffers-left::before {
+  left: -16px;
+  -webkit-box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
+          box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.re-currentOffers-left::after {
+  right: -16px;
+  -webkit-box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.re-currentOffers-slider {
+  max-width: 800px;
+  margin: 0;
+}
+
+.re-currentOffers-slider .re-slider-item {
+  width: 160px !important;
+  margin: 0 33px;
+}
+
+.re-currentOffers-slider .re-slider-item .re-item-img {
+  margin: 0 0 13px;
+}
+
+.re-currentOffers-slider .re-slider-item .re-item-img img {
+  width: 160px;
+}
+
+.re-currentOffers-slider .re-item-description {
+  margin: 0 0 45px;
+}
+
+.re-currentOffers-slider .re-item-description p {
+  color: #3d3d3d;
+}
+
+.re-currentOffers-slider .re-item-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0 0 25px;
+}
+
+.re-currentOffers-slider .re-item-action .re-item-price p {
+  color: #7e7e7e;
+}
+
+.re-currentOffers-slider .re-item-action .re-item-price p span {
+  font-weight: bold;
+  color: #3d3d3d;
+}
+
+.re-currentOffers-slider .re-item-action .re-item-action__btn {
+  margin: -5px 0 0;
+}
+
+.re-currentOffers-slider .re-item-action .re-item-action__btn button {
+  background-color: white;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  color: #3d3d3d;
+  outline: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  padding: 4px 18px;
+  color: #7e7e7e;
+}
+
+.re-currentOffers-right {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 20px 25px;
+}
+
+.re-currentOffers-right .re-currentOffers-right__title h2 {
+  margin: 0 0 30px;
 }
 
 footer {
@@ -438,8 +653,8 @@ footer {
 }
 
 .re-footer-menu nav ul li a {
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .re-footer-menu nav ul li a:hover {

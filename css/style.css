@@ -746,6 +746,92 @@ ul li {
   transition: 0.5s ease;
 }
 
+/* section aboutUs */
+.re-aboutUs .re-aboutUs-row {
+  margin: 0 auto 44px;
+}
+
+.re-aboutUs-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.re-aboutUs-items .re-aboutUs-item {
+  position: relative;
+  width: 250px;
+  height: 235px;
+  border-radius: 15px;
+}
+
+.re-aboutUs-items .re-aboutUs-item .re-aboutUs-description {
+  position: absolute;
+  top: 34%;
+  left: 21%;
+  text-align: center;
+}
+
+.re-aboutUs-items .re-aboutUs-item .re-aboutUs-description h2 {
+  font-size: 1.9em;
+  margin: 0 0 3px;
+}
+
+.re-aboutUs-items .re-aboutUs-item .re-aboutUs-description p {
+  font-size: 1.0865em;
+}
+
+.re-aboutUs-item::before {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 12em;
+  line-height: 215px;
+  top: 0;
+  left: 20px;
+}
+
+.re-aboutUs-item:nth-child(1) {
+  margin-left: 0;
+  background-color: #eabe7c;
+}
+
+.re-aboutUs-item:nth-child(1)::before {
+  content: 'R';
+}
+
+.re-aboutUs-item:nth-child(2) {
+  background-color: #d9dd92;
+}
+
+.re-aboutUs-item:nth-child(2)::before {
+  content: 'A';
+}
+
+.re-aboutUs-item:nth-child(2)::after {
+  content: url(../img/fire.png);
+  position: absolute;
+  bottom: 3px;
+  left: 40px;
+}
+
+.re-aboutUs-item:nth-child(3) {
+  background-color: #ece4b7;
+}
+
+.re-aboutUs-item:nth-child(3)::before {
+  content: 'M';
+}
+
+.re-aboutUs-item:nth-child(4) {
+  margin-right: 0;
+  background-color: #ffa200;
+}
+
+.re-aboutUs-item:nth-child(4)::before {
+  content: 'F';
+}
+
 footer {
   color: white;
 }

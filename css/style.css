@@ -526,8 +526,7 @@ ul li {
 .re-currentOffers-slider .re-slider-item:hover .re-item-action__btn button {
   background-color: #dd6031;
   color: white;
-  border: none;
-  padding: 5px 19px;
+  border: 1px solid transparent;
 }
 
 .re-currentOffers-slider .re-item-description {
@@ -692,8 +691,7 @@ ul li {
 .re-newProduct-items .re-item:hover .re-item-action__btn button {
   background-color: #dd6031;
   color: white;
-  border: none;
-  padding: 5px 19px;
+  border: 1px solid transparent;
 }
 
 .re-newProduct-items .re-item-description {

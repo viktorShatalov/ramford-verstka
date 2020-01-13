@@ -454,7 +454,7 @@ ul li {
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   padding: 20px 30px;
-  margin: 0 37px 0 0;
+  margin: 0 33px 0 0;
 }
 
 .re-currentOffers-left .re-currentOffers-left__title {
@@ -490,13 +490,13 @@ ul li {
 }
 
 .re-currentOffers-left::before {
-  left: -16px;
+  left: -17px;
   -webkit-box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
           box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
 }
 
 .re-currentOffers-left::after {
-  right: -16px;
+  right: -17px;
   -webkit-box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
 }
@@ -519,12 +519,25 @@ ul li {
   width: 160px;
 }
 
+.re-currentOffers-slider .re-slider-item:hover .re-item-description p {
+  color: #dd6031;
+}
+
+.re-currentOffers-slider .re-slider-item:hover .re-item-action__btn button {
+  background-color: #dd6031;
+  color: white;
+  border: none;
+  padding: 5px 19px;
+}
+
 .re-currentOffers-slider .re-item-description {
   margin: 0 0 45px;
 }
 
 .re-currentOffers-slider .re-item-description p {
   color: #3d3d3d;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .re-currentOffers-slider .re-item-action {
@@ -562,6 +575,8 @@ ul li {
   cursor: pointer;
   padding: 4px 18px;
   color: #7e7e7e;
+  transition: 0.5s ease;
+  border: 1px solid #1d1d1d;
 }
 
 .re-currentOffers-right {
@@ -575,6 +590,159 @@ ul li {
 
 .re-currentOffers-right .re-currentOffers-right__title h2 {
   margin: 0 0 30px;
+}
+
+.re-currentOffers-right__description {
+  margin: 0 0 50px;
+  color: #3d3d3d;
+  line-height: 20px;
+}
+
+.re-currentOffers-right__description h4 {
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.re-currentOffers-right__description p {
+  font-size: smaller;
+  color: #7e7e7e;
+  margin: 0 0 10px;
+}
+
+.re-currentOffers-right__description ul li {
+  font-size: 0.9em;
+}
+
+.re-currentOffers-right__btn button {
+  background-color: white;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  color: #3d3d3d;
+  outline: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  padding: 10px 45px 13px;
+  color: #dd6031;
+  border: 1px solid #dd6031;
+  transition: 0.5s ease;
+}
+
+.re-currentOffers-right__btn button:hover {
+  background-color: #dd6031;
+  color: white;
+}
+
+/* section-newProduct */
+.re-newProduct .re-newProduct-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 44px auto;
+}
+
+.re-newProduct-content {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
+  margin: 0 33px 0 0;
+}
+
+.re-newProduct-content .re-newProduct__title {
+  margin: 0 0 0 30px;
+}
+
+.re-newProduct-content .re-newProduct__title h2 {
+  margin: 0 0 33px 0;
+}
+
+.re-newProduct-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.re-newProduct-items .re-item {
+  width: 160px;
+  margin: 0 30px;
+}
+
+.re-newProduct-items .re-item .re-item-img {
+  margin: 0 0 13px;
+}
+
+.re-newProduct-items .re-item .re-item-img img {
+  width: 160px;
+}
+
+.re-newProduct-items .re-item:hover .re-item-description p {
+  color: #dd6031;
+}
+
+.re-newProduct-items .re-item:hover .re-item-action__btn button {
+  background-color: #dd6031;
+  color: white;
+  border: none;
+  padding: 5px 19px;
+}
+
+.re-newProduct-items .re-item-description {
+  margin: 0 0 45px;
+}
+
+.re-newProduct-items .re-item-description p {
+  color: #3d3d3d;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.re-newProduct-items .re-item-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0 0 25px;
+}
+
+.re-newProduct-items .re-item-action .re-item-price p {
+  color: #7e7e7e;
+}
+
+.re-newProduct-items .re-item-action .re-item-price p span {
+  font-weight: bold;
+  color: #3d3d3d;
+}
+
+.re-newProduct-items .re-item-action .re-item-action__btn {
+  margin: -5px 0 0;
+}
+
+.re-newProduct-items .re-item-action .re-item-action__btn button {
+  background-color: white;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  color: #3d3d3d;
+  outline: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  border: 1px solid #1d1d1d;
+  padding: 4px 18px;
+  color: #7e7e7e;
+  transition: 0.5s ease;
 }
 
 footer {

@@ -129,7 +129,7 @@
     position: relative;
     @include background;
     padding: 20px 30px;
-    margin: 0 37px 0 0;
+    margin: 0 33px 0 0;
     .re-currentOffers-left__title{
         margin: 0 0 0 30px;
         h2{
@@ -160,11 +160,11 @@
     background-color: $color_white;
 }
 .re-currentOffers-left::before{
-    left: -16px;
+    left: -17px;
     box-shadow: -1px 0 1px $color_box-shadow;
 }
 .re-currentOffers-left::after{
-    right: -16px;
+    right: -17px;
     box-shadow: 1px 0 1px $color_box-shadow;
 }
 .re-currentOffers-slider{
@@ -180,10 +180,19 @@
             }
         }
     }
+    .re-slider-item:hover .re-item-description p{
+        color: $color_vanilla;
+    }
+    .re-slider-item:hover .re-item-action__btn button{
+        @include button_hover;
+        border: none;
+        padding: 5px 19px;
+    }
     .re-item-description{
         margin: 0 0 45px;
         p{
             color: $color_text_menu;
+            @include transition;
         }
     }
     .re-item-action{
@@ -205,6 +214,8 @@
                 @include button;
                 padding: 4px 18px;
                 color: $color_signature;
+                @include transition;
+                border: 1px solid $color_footer-bg;
             }
         }
     }
@@ -220,20 +231,108 @@
     }
 }
 .re-currentOffers-right__description{
+    margin: 0 0 50px;
+    color: $color_text_menu;
+    line-height: 20px;
     h4{
-
+        font-weight: normal;
+        margin: 0 0 10px;
     }
     p{
-
+        font-size: smaller;
+        color: $color_signature;
+        margin: 0 0 10px;
     }
     ul{
         li{
-
+            font-size: 0.9em;
         }
     }
 }
 .re-currentOffers-right__btn{
     button{
+        @include button;
+        padding: 10px 45px 13px;    
+        color: $color_vanilla;
+        border: 1px solid $color_vanilla;
+        @include transition;
+    }
+    button:hover{
+        @include button_hover;
+    }
+}
 
+/* section-newProduct */ 
+
+.re-newProduct{
+    .re-newProduct-row{
+        @include dspFlex;
+        flex-wrap: nowrap;
+        margin: 44px auto;
+    }
+}
+.re-newProduct-content{
+    @include background;
+    padding: 20px 30px;
+    margin: 0 33px 0 0;
+    .re-newProduct__title{
+        margin: 0 0 0 30px;
+        h2{
+            margin: 0 0 33px 0;
+        }
+    }
+}
+
+.re-newProduct-items{
+    @include dspFlex;
+    flex-wrap: nowrap;
+    .re-item{
+        width: 160px;
+        margin: 0 30px;
+        .re-item-img{
+            margin: 0 0 13px;
+            img{
+                width: 160px;
+            }
+        }
+    }
+    .re-item:hover .re-item-description p{
+        color: $color_vanilla;
+    }
+    .re-item:hover .re-item-action__btn button{
+        @include button_hover;
+        border: none;
+        padding: 5px 19px;
+    }
+    .re-item-description{
+        margin: 0 0 45px;
+        p{
+            color: $color_text_menu;
+            @include transition;
+        }
+    }
+    .re-item-action{
+        @include dspFlex;
+        flex-wrap: nowrap;
+        margin: 0 0 25px;
+        .re-item-price{
+            p{
+                color: $color_signature;
+                span{
+                    font-weight: bold;
+                    color: $color_text_menu;
+                }
+            }
+        }
+        .re-item-action__btn{
+            margin: -5px 0 0;
+            button{
+                @include button;
+                border: 1px solid $color_footer-bg;
+                padding: 4px 18px;
+                color: $color_signature;
+                @include transition;
+            }
+        }
     }
 }

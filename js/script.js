@@ -13,6 +13,7 @@ $('.re-currentOffers-slider').slick({
     dots: false,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplaySpeed: 1000,
     // responsive: [
     //     {
     //       breakpoint: 1360,

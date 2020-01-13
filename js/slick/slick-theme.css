@@ -53,12 +53,12 @@
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before{
-    content: url(../img/prev-hover.png);
+    content: url(../../img/slick-prev.png);
 }
 .slick-next:hover:before,
 .slick-next:focus:before
 {
-    content: url(../img/next-hover.png);
+    content: url(../../img/slick-next.png);
 }
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before

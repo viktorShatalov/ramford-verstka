@@ -43,6 +43,13 @@ ul li {
   list-style: none;
 }
 
+.re-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
 .re-header-row__top {
   background-color: #dd6031;
 }
@@ -644,7 +651,7 @@ ul li {
       flex-wrap: wrap;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  margin: 44px auto;
+  margin: 44px auto 53px;
 }
 
 .re-newProduct-content {
@@ -757,6 +764,9 @@ ul li {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .re-aboutUs-items .re-aboutUs-item {
@@ -764,13 +774,15 @@ ul li {
   width: 250px;
   height: 235px;
   border-radius: 15px;
+  margin: 0;
 }
 
 .re-aboutUs-items .re-aboutUs-item .re-aboutUs-description {
   position: absolute;
-  top: 34%;
-  left: 21%;
+  top: 35.5%;
+  left: 23%;
   text-align: center;
+  color: #1d1d1d;
 }
 
 .re-aboutUs-items .re-aboutUs-item .re-aboutUs-description h2 {
@@ -782,17 +794,24 @@ ul li {
   font-size: 1.0865em;
 }
 
+.re-aboutUs-items .re-aboutUs-item:nth-child(3) .re-aboutUs-description {
+  left: 37px;
+}
+
+.re-aboutUs-items .re-aboutUs-item:nth-child(1) .re-aboutUs-description {
+  left: 48px;
+}
+
 .re-aboutUs-item::before {
   position: absolute;
   color: rgba(255, 255, 255, 0.2);
-  font-size: 12em;
+  font-size: 10em;
   line-height: 215px;
-  top: 0;
+  top: 7px;
   left: 20px;
 }
 
 .re-aboutUs-item:nth-child(1) {
-  margin-left: 0;
   background-color: #eabe7c;
 }
 
@@ -812,7 +831,7 @@ ul li {
   content: url(../img/fire.png);
   position: absolute;
   bottom: 3px;
-  left: 40px;
+  left: 32px;
 }
 
 .re-aboutUs-item:nth-child(3) {
@@ -824,12 +843,196 @@ ul li {
 }
 
 .re-aboutUs-item:nth-child(4) {
-  margin-right: 0;
   background-color: #ffa200;
 }
 
 .re-aboutUs-item:nth-child(4)::before {
   content: 'F';
+}
+
+/* section formApplication */
+.re-formApplication-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 31px 0 0;
+  margin: 0 auto 30px;
+}
+
+.re-formApplication-content {
+  margin: 0 34px;
+}
+
+.re-formApplication-content .re-content-title h2 {
+  margin: 0 0 56px 0;
+}
+
+.re-formApplication-content .re-content-title h2::after {
+  content: 'Отвечаем в течение 15 минут';
+  font-size: 0.65em;
+  font-weight: normal;
+  color: #313131;
+  margin: 0 0 0 24px;
+}
+
+.re-form-input input {
+  width: 209px;
+  padding: 11px;
+  border-radius: 5px;
+  border: 1px solid #dd6031;
+  margin: 0 17px 18px 0;
+}
+
+.re-form-textarea textarea {
+  width: 463px;
+  height: 44px;
+  padding: 11px;
+  border-radius: 5px;
+  border: 1px solid #dd6031;
+  resize: none;
+  margin: 0 0 19px;
+}
+
+.re-form-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.re-form-btn button {
+  padding: 10px 16px;
+  background-color: white;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  color: #3d3d3d;
+  outline: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+  transition: 0.5s ease;
+  margin: 0 20px 0 0;
+}
+
+.re-form-btn button:hover {
+  background-color: #dd6031;
+  color: white;
+  border: 1px solid transparent;
+}
+
+.re-form-btn .re-social {
+  line-height: 20px;
+}
+
+.re-form-btn .re-social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.re-form-btn .re-social ul li {
+  margin: 0 25px 0 15px;
+  position: relative;
+}
+
+.re-form-btn .re-social ul li a {
+  color: #313131;
+  font-size: 0.8em;
+}
+
+.re-form-btn .re-social ul li:before {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: -18px;
+  top: 2px;
+}
+
+.re-form-btn .re-social ul li:nth-child(1)::before {
+  content: url(../img/whatsapp-icon.png);
+}
+
+.re-form-btn .re-social ul li:nth-child(2)::before {
+  content: url(../img/viber-icon.png);
+}
+
+.re-form-btn .re-social ul li:nth-child(3)::before {
+  content: url(../img/telegram-icon.png);
+}
+
+.re-formApplication-right {
+  margin: 0 34px -4px;
+}
+
+/* section news */
+.re-news .re-news-row {
+  margin: 0 auto 44px;
+}
+
+.re-news .re-news-row .re-news-title h2 {
+  margin: 0 0 30px;
+}
+
+.re-news-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.re-news-items a {
+  margin: 0;
+}
+
+.re-news-items .re-news-item {
+  position: relative;
+  width: 250px;
+  height: 235px;
+  border-radius: 15px;
+  margin: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.re-news-items .re-news-item .re-news-description {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  text-align: left;
+  color: white;
+}
+
+.re-news-items .re-news-item .re-news-description h2 {
+  font-size: 1.2em;
+  margin: 0 0 3px;
+}
+
+.re-news-items .re-news-item .re-news-description p {
+  font-size: 0.865em;
+}
+
+.re-news-item:hover .re-news-description {
+  color: #dd6031;
+}
+
+.re-news-item::before {
+  content: url(../img/news_image-Kamin.png);
 }
 
 footer {

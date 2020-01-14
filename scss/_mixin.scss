@@ -30,3 +30,9 @@
     border-radius: 10px;
     box-shadow: 0 3px 3px $color_box-shadow;
 }
+@mixin input {
+    
+    padding: 11px;
+    border-radius: 5px;
+    border: 1px solid $color_vanilla;
+}

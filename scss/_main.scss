@@ -266,7 +266,7 @@
     .re-newProduct-row{
         @include dspFlex;
         flex-wrap: nowrap;
-        margin: 44px auto;
+        margin: 44px auto 53px;
     }
 }
 .re-newProduct-content{
@@ -342,16 +342,19 @@
 }
 .re-aboutUs-items{
     @include dspFlex;
+    justify-content: space-between;
     .re-aboutUs-item{
         position: relative;
         width: 250px;
         height: 235px;
         border-radius: 15px;
+        margin: 0;
         .re-aboutUs-description{
             position: absolute;
-            top: 34%;
-            left: 21%;
+            top: 35.5%;
+            left: 23%;
             text-align: center;
+            color: $color_footer-bg;
             h2{
                 font-size: 1.9em;
                 margin: 0 0 3px;
@@ -361,17 +364,26 @@
             }
         }
     }
+    .re-aboutUs-item:nth-child(3){
+        .re-aboutUs-description{
+            left: 37px;
+        }
+    }
+    .re-aboutUs-item:nth-child(1){
+        .re-aboutUs-description{
+            left: 48px;
+        }
+    }
 }
 .re-aboutUs-item::before{
     position: absolute;
     color: rgba(255, 255, 255, 0.2);
-    font-size: 12em;
+    font-size: 10em;
     line-height: 215px;
-    top: 0;
+    top: 7px;
     left: 20px;
 }
 .re-aboutUs-item:nth-child(1){
-    margin-left: 0;
     background-color: $color_apricot;
 }
 .re-aboutUs-item:nth-child(1)::before{
@@ -387,7 +399,7 @@
     content: url(../img/fire.png);
     position: absolute;
     bottom: 3px;
-    left: 40px;
+    left: 32px;
 }
 .re-aboutUs-item:nth-child(3){
     background-color: $color_light-brown;
@@ -396,9 +408,142 @@
     content: 'M';
 }
 .re-aboutUs-item:nth-child(4){
-    margin-right: 0;
     background-color: $color_yellow;
 }
 .re-aboutUs-item:nth-child(4)::before{
     content: 'F';
+}
+
+/* section formApplication */
+
+.re-formApplication-row{
+    @include dspFlex;
+    justify-content: space-between;
+    @include background;
+    padding: 31px 0 0;
+    margin: 0 auto 30px;
+}
+.re-formApplication-content{
+    margin: 0 34px;
+       .re-content-title{
+           h2{
+            margin: 0 0 56px 0;
+           }
+           h2::after{
+               content: 'Отвечаем в течение 15 минут';
+               font-size: 0.65em;
+               font-weight: normal;
+               color: $color_form-after;
+               margin: 0 0 0 24px;
+           }
+       } 
+}
+.re-form-input{
+       input{
+            width: 209px;
+           @include input;
+           margin: 0 17px 18px 0;
+       }
+       
+}
+.re-form-textarea{
+    textarea{
+        width: 463px;
+        height: 44px;
+        @include input;
+        resize: none;
+        margin: 0 0 19px;
+    }
+}
+.re-form-btn{
+    @include dspFlex;
+    button{
+        padding: 10px 16px;
+        @include button;
+        @include transition;
+        margin: 0 20px 0 0;
+    }
+    button:hover{
+        @include button_hover;
+    }
+    .re-social{
+        line-height: 20px;
+        ul{
+            @include dspFlex;
+            li{
+                margin: 0 25px 0 15px;
+                position: relative;
+                a{
+                    color: $color_form-after;
+                    font-size: 0.8em;
+                }
+            }
+            li:before{
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                left: -18px;
+                top: 2px;
+            }
+            li:nth-child(1)::before{
+                content: url(../img/whatsapp-icon.png);
+            }
+            li:nth-child(2)::before{
+                content: url(../img/viber-icon.png);
+            }
+            li:nth-child(3)::before{
+                content: url(../img/telegram-icon.png);
+            }
+        }
+    }
+}
+.re-formApplication-right{
+    margin: 0 34px -4px;
+}
+
+/* section news */ 
+.re-news{
+    .re-news-row{
+        margin: 0 auto 44px;
+        .re-news-title{
+            h2{
+                margin: 0 0 30px;
+            }
+        }
+    }
+}
+.re-news-items{
+    @include dspFlex;
+    justify-content: space-between;
+    a{
+        margin: 0;
+    }
+    .re-news-item{
+        position: relative;
+        width: 250px;
+        height: 235px;
+        border-radius: 15px;
+        margin: 0;
+        @include transition;
+        .re-news-description{
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            text-align: left;
+            color: $color_white;
+            h2{
+                font-size: 1.2em;
+                margin: 0 0 3px;
+            }
+            p{
+                font-size: 0.865em;
+            }
+        }
+    }
+}
+.re-news-item:hover .re-news-description{
+    color: $color_vanilla;
+}
+.re-news-item::before{
+    content: url(../img/news_image-Kamin.png);
 }

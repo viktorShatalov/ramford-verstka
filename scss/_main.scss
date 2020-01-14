@@ -282,10 +282,9 @@
 }
 
 .re-newProduct-items{
-    @include dspFlex;
-    flex-wrap: nowrap;
+    max-width: 1100px;
     .re-item{
-        width: 160px;
+        width: 160px !important;
         margin: 0 30px;
         .re-item-img{
             margin: 0 0 13px;

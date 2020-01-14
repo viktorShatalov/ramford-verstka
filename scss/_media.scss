@@ -1,0 +1,199 @@
+@media (max-width: 767px){
+    html{
+        overflow-x: hidden;
+    }
+    .re-header-row__top,
+    .re-header-menu,
+    .re-request-call,
+    .re-currentOffers-right
+    {
+        display: none;
+    }
+    .re-header-row__down{
+        .re-logo{
+            flex: 0;
+            margin: 0;
+            img{
+                width: 142px;
+            }
+        }
+    }
+    .re-cart{
+        left: -15%;
+        top: -10px;
+    }
+    .burger-menu{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        top: 25px;
+        left: 30%;
+    }
+    .burger-menu span{
+        position: absolute;
+        background-color: $color_burger-menu;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        top: 9px;
+        -webkit-transition: all .3s ease 0s;
+        -o-transition: all .3s ease 0s;
+        transition: all .3s ease 0s;
+    }
+    .burger-menu::before,
+    .burger-menu::after{
+        content: '';
+        background-color: $color_burger-menu;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        -webkit-transition: all .3s ease 0s;
+        -o-transition: all .3s ease 0s;
+        transition: all .3s ease 0s;
+    }
+    .burger-menu::before{
+        top: 0;
+    }
+    .burger-menu::after{
+        bottom: 0;
+    }
+    .re-info-block{
+        .re-conteiner{
+            flex-direction: column-reverse;
+            .re-info-left{
+                flex: 1;
+                margin: 0 auto;
+                width: auto;
+            }
+        }
+    } 
+    .re-counter-form{
+        margin: 0 auto;
+        input{
+            width: 290px;
+            margin: 0 auto 18px;
+        }
+        button{
+            width: 302px;
+        }
+    }  
+    .re-info-slider{
+        max-width: 320px;
+        margin: 0 auto 25px;
+        .re-slider-item{
+            img{
+                max-width: 280px;
+            }
+        }
+    }
+    .re-currentOffers{
+        .re-currentOffers-row{
+            flex-wrap: wrap;
+        }
+    } 
+    .re-currentOffers-left{
+        padding: 20px 45px;
+        margin: 0 auto;
+        .re-currentOffers-left__title{
+            margin: 0 auto;
+        }
+    } 
+    .re-currentOffers-slider{
+        width: auto;
+        margin: 0 auto;
+    }
+    .re-aboutUs-items{
+        .re-aboutUs-item{
+            margin: 0 auto 22px;
+        }
+    } 
+    .re-news-items a{
+        margin: 0 auto 22px;
+    }
+    .re-formApplication-content{
+        margin: 0 auto 34px;
+    }
+    .re-news{
+        .re-news-row{
+            .re-news-title h2{
+                margin: 0 auto 30px;
+                text-align: center
+            }
+        }
+    }  
+}
+
+@media (max-width: 425px){
+    .re-cart{
+        left: -10%;
+        top: -10px;
+    }
+    .burger-menu{
+        left: 35%;
+    }
+}
+@media (max-width: 414px){
+    .re-counter-form{
+        input{
+            width: 330px;
+        }
+        button{
+            width: 344px;
+        }
+    }  
+    .re-info-block{
+        .re-conteiner{
+            .re-info-left{
+                padding: 24px 50px;
+            }
+        }
+    } 
+    .re-info-slider{
+        margin: 0 auto 25px;
+    }
+}
+@media (max-width: 375px){
+    .re-cart{
+        left: -15%;
+        top: -10px;
+    }
+    .burger-menu{
+        left: 30%;
+    }
+    .re-info-block{
+        .re-conteiner{
+            .re-info-left{
+                padding: 24px 20px;
+            }
+        }
+    } 
+    .re-counter-form{
+        input{
+            width: 312px;
+        }
+        button{
+            width: 326px;
+        }
+    }  
+}
+
+@media (max-width: 360px){
+    .burger-menu{
+        left: 25%;
+    }
+}
+@media (max-width: 320px){
+    .re-counter-form{
+        input{
+            width: 260px;
+        }
+        button{
+            width: 273px;
+        }
+    }  
+    .re-info-slider{
+        margin: 0 auto 25px;
+    }
+}

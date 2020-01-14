@@ -43,6 +43,13 @@ ul li {
   list-style: none;
 }
 
+.re-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -41px;
+  z-index: 2;
+}
+
 .re-header-row__top {
   background-color: #dd6031;
 }

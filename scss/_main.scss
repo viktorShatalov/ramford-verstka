@@ -88,6 +88,9 @@
             width: 205px;
             margin: 0 15px 30px 0;
         }
+        li a:hover .re-item-description p{
+            color: $color_vanilla;
+        }
     }
 }
 .re-navigation-item{
@@ -101,9 +104,6 @@
             color: $color_text_menu;
             font-size: 1.125em;
             @include transition;
-        }
-        p:hover{
-            color: $color_vanilla;
         }
         span{
            color: $color_signature;
@@ -166,6 +166,7 @@
 .re-currentOffers-slider{
     max-width: 800px;
     margin: 0;
+    @include current-item_hover;
     .re-slider-item{
         width: 160px !important;
         margin: 0 33px;
@@ -175,12 +176,6 @@
                 width: 160px;
             }
         }
-    }
-    .re-slider-item:hover .re-item-description p{
-        color: $color_vanilla;
-    }
-    .re-slider-item:hover .re-item-action__btn button{
-        @include button_hover;
     }
     .re-item-description{
         margin: 0 0 45px;
@@ -241,15 +236,11 @@
     }
 }
 .re-currentOffers-right__btn{
-    button{
-        @include button;
-        padding: 10px 45px 13px;    
-        color: $color_vanilla;
+    a.anim_btn:link, a.anim_btn:visited {
+        padding: 10px 40px 13px;
+        max-width: 135px;
+        font-size: 1.125em;
         border: 1px solid $color_vanilla;
-        @include transition;
-    }
-    button:hover{
-        @include button_hover;
     }
 }
 
@@ -276,6 +267,7 @@
 
 .re-newProduct-items{
     max-width: 1100px;
+    @include newProduct-item_hover;
     .re-item{
         width: 160px !important;
         margin: 0 30px;
@@ -285,9 +277,6 @@
                 width: 160px;
             }
         }
-    }
-    .re-item:hover .re-item-description p{
-        color: $color_vanilla;
     }
     .re-item-description{
         margin: 0 0 45px;
@@ -446,6 +435,11 @@
 }
 .re-form-btn{
     @include dspFlex;
+    a.anim_btn:link, a.anim_btn:visited {
+        padding: 10px 16px;
+        max-width: 167px;
+        margin: 0 20px 0 0;
+    }
     button{
         padding: 10px 16px;
         @include button;
@@ -520,6 +514,7 @@
             left: 5%;
             text-align: left;
             color: $color_white;
+            z-index: 1;
             h2{
                 font-size: 1.2em;
                 margin: 0 0 3px;
@@ -529,6 +524,17 @@
             }
         }
     }
+}
+.re-news-item::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    height: 63px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,100%), rgba(0,0,0,0%));
 }
 .re-news-item:hover .re-news-description{
     color: $color_vanilla;

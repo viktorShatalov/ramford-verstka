@@ -38,6 +38,40 @@
     z-index: -1;
     @include transition;
 }
+@mixin current-item_hover {
+    .re-slider-item:hover .re-item-description p{
+        color: $color_vanilla;
+    }
+    .re-slider-item:hover .re-item-action__btn a.anim_btn:link{
+        color: $color_white;
+    }
+    .re-slider-item:hover .re-item-action__btn a.anim_btn:visited{
+        color: $color_white;
+    }
+    .re-slider-item:hover .re-item-action__btn a.anim_btn:link::after{
+        height: 500%;
+    }
+    .re-slider-item:hover .re-item-action__btn a.anim_btn:visited::after{
+        height: 500%;
+    }
+}
+@mixin newProduct-item_hover{
+    .re-item:hover .re-item-description p{
+        color: $color_vanilla;
+    }
+    .re-item:hover .re-item-action__btn a.anim_btn:link{
+        color: $color_white;
+    }
+    .re-item:hover .re-item-action__btn a.anim_btn:visited{
+        color: $color_white;
+    }
+    .re-item:hover .re-item-action__btn a.anim_btn:link::after{
+        height: 500%;
+    }
+    .re-item:hover .re-item-action__btn a.anim_btn:visited::after{
+        height: 500%;
+    }
+}
 @mixin button_hover{
     background-color:  $color_vanilla;
     color: $color_white;

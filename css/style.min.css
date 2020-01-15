@@ -85,6 +85,13 @@ ul li {
   list-style: none;
 }
 
+.re-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -41px;
+  z-index: 2;
+}
+
 .re-header-row__top {
   background-color: #dd6031;
 }
@@ -423,6 +430,10 @@ ul li {
   margin: 0 15px 30px 0;
 }
 
+.re-subMenu-navigation ul li a:hover .re-item-description p {
+  color: #dd6031;
+}
+
 .re-navigation-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,10 +455,6 @@ ul li {
   font-size: 1.125em;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-.re-navigation-item .re-item-description p:hover {
-  color: #dd6031;
 }
 
 .re-navigation-item .re-item-description span {
@@ -526,6 +533,26 @@ ul li {
   margin: 0;
 }
 
+.re-currentOffers-slider .re-slider-item:hover .re-item-description p {
+  color: #dd6031;
+}
+
+.re-currentOffers-slider .re-slider-item:hover .re-item-action__btn a.anim_btn:link {
+  color: white;
+}
+
+.re-currentOffers-slider .re-slider-item:hover .re-item-action__btn a.anim_btn:visited {
+  color: white;
+}
+
+.re-currentOffers-slider .re-slider-item:hover .re-item-action__btn a.anim_btn:link::after {
+  height: 500%;
+}
+
+.re-currentOffers-slider .re-slider-item:hover .re-item-action__btn a.anim_btn:visited::after {
+  height: 500%;
+}
+
 .re-currentOffers-slider .re-slider-item {
   width: 160px !important;
   margin: 0 33px;
@@ -537,15 +564,6 @@ ul li {
 
 .re-currentOffers-slider .re-slider-item .re-item-img img {
   width: 160px;
-}
-
-.re-currentOffers-slider .re-slider-item:hover .re-item-description p {
-  color: #dd6031;
-}
-
-.re-currentOffers-slider .re-slider-item:hover .re-item-action__btn button {
-  background-color: #dd6031;
-  color: white;
 }
 
 .re-currentOffers-slider .re-item-description {
@@ -621,28 +639,11 @@ ul li {
   font-size: 0.9em;
 }
 
-.re-currentOffers-right__btn button {
-  background-color: white;
-  border: 1px solid #b1b1b1;
-  border-radius: 5px;
-  color: #3d3d3d;
-  position: relative;
-  display: block;
-  width: 100%;
-  z-index: 1;
-  overflow: hidden;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  padding: 10px 45px 13px;
-  color: #dd6031;
+.re-currentOffers-right__btn a.anim_btn:link, .re-currentOffers-right__btn a.anim_btn:visited {
+  padding: 10px 40px 13px;
+  max-width: 135px;
+  font-size: 1.125em;
   border: 1px solid #dd6031;
-  transition: all 0.3s ease;
-}
-
-.re-currentOffers-right__btn button:hover {
-  background-color: #dd6031;
-  color: white;
 }
 
 /* section-newProduct */
@@ -678,6 +679,26 @@ ul li {
   max-width: 1100px;
 }
 
+.re-newProduct-items .re-item:hover .re-item-description p {
+  color: #dd6031;
+}
+
+.re-newProduct-items .re-item:hover .re-item-action__btn a.anim_btn:link {
+  color: white;
+}
+
+.re-newProduct-items .re-item:hover .re-item-action__btn a.anim_btn:visited {
+  color: white;
+}
+
+.re-newProduct-items .re-item:hover .re-item-action__btn a.anim_btn:link::after {
+  height: 500%;
+}
+
+.re-newProduct-items .re-item:hover .re-item-action__btn a.anim_btn:visited::after {
+  height: 500%;
+}
+
 .re-newProduct-items .re-item {
   width: 160px !important;
   margin: 0 30px;
@@ -689,10 +710,6 @@ ul li {
 
 .re-newProduct-items .re-item .re-item-img img {
   width: 160px;
-}
-
-.re-newProduct-items .re-item:hover .re-item-description p {
-  color: #dd6031;
 }
 
 .re-newProduct-items .re-item-description {
@@ -894,6 +911,12 @@ ul li {
       flex-wrap: wrap;
 }
 
+.re-form-btn a.anim_btn:link, .re-form-btn a.anim_btn:visited {
+  padding: 10px 16px;
+  max-width: 167px;
+  margin: 0 20px 0 0;
+}
+
 .re-form-btn button {
   padding: 10px 16px;
   background-color: white;
@@ -1003,6 +1026,7 @@ ul li {
   left: 5%;
   text-align: left;
   color: white;
+  z-index: 1;
 }
 
 .re-news-items .re-news-item .re-news-description h2 {
@@ -1012,6 +1036,19 @@ ul li {
 
 .re-news-items .re-news-item .re-news-description p {
   font-size: 0.865em;
+}
+
+.re-news-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  height: 63px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
 }
 
 .re-news-item:hover .re-news-description {

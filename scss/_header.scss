@@ -14,10 +14,10 @@
             margin: 0;
         }
         .re-payment,.re-credit{
-            margin: 8px 17px 14px;
+            margin: 8px 33px 14px 2px;
         }
         .re-phone{
-            margin: 9px -15px 14px 32px;
+            margin: 9px auto 14px;
         }
     }
 }
@@ -35,8 +35,9 @@
 }
 .re-location{
     position: relative;
-    margin: 8px 55px 15px;
+    margin: 8px 50px 15px 0;
     color: $color_white;
+    flex: 1 1 auto;
     .re-question{
         width: 290px;
         position: absolute;
@@ -82,6 +83,8 @@
 }
 .re-phone{
     position: relative;
+    flex: 1 1 auto;
+    margin: 9px 0 14px 0;
 }
 .re-phone::before{
     content: url(../img/phone.png);
@@ -96,14 +99,14 @@
         @include dspFlex;
     }
     .re-logo{
-        padding: 18px ;
+        margin: 18px auto;
         flex: 1;
     }
 }
 .re-header-menu{
-    flex: 3;
+    flex: 0 1 auto;
         ul{
-            padding: 30px 17px 32px;
+            margin: 30px 33px 32px;
             @include dspFlex;
             justify-content: flex-end;
             li{
@@ -139,7 +142,7 @@
     display: none;
 }
 .re-request-call{
-    padding: 23px 26px 0;
+    margin: 23px 40px 0 0;
     a.anim_btn:link, a.anim_btn:visited {
         max-width: 128px;
         padding: 7px 30px;
@@ -147,7 +150,8 @@
     }
 }
 .re-cart{
-    padding: 32px 0px 0;    
+    padding: 32px 0px 0; 
+    margin: 0 15px 0 0;   
     position: relative;
     p{
         position: absolute;

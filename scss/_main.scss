@@ -8,7 +8,7 @@
             width: 235px;
             @include background;
             padding: 24px 30px;
-            margin: 0 28px 0 0;
+            margin: 0 15px 0 0;
         }
         .re-info-right{
             margin: 0;
@@ -63,11 +63,13 @@
     }
 }
 .re-info-slider{
-    max-width: 839px;
-    margin: 0 -14px 0 0;
+    max-width: 850px;
     .re-slider-item{
+        
         img{
-            max-width: 839px;
+            max-width: 840px;
+            position: relative;
+            margin: 0 10px;
         }
     }
 }
@@ -164,17 +166,14 @@
     box-shadow: 1px 0 1px $color_box-shadow;
 }
 .re-currentOffers-slider{
-    max-width: 800px;
+    max-width: 810px;
     margin: 0;
     @include current-item_hover;
     .re-slider-item{
-        width: 160px !important;
-        margin: 0 33px;
+        width: 157px !important;
+        margin: 0 25px;
         .re-item-img{
             margin: 0 0 13px;
-            img{
-                width: 160px;
-            }
         }
     }
     .re-item-description{
@@ -256,7 +255,6 @@
 .re-newProduct-content{
     @include background;
     padding: 20px 30px;
-    margin: 0 33px 0 0;
     .re-newProduct__title{
         margin: 0 0 0 30px;
         h2{
@@ -269,13 +267,10 @@
     max-width: 1100px;
     @include newProduct-item_hover;
     .re-item{
-        width: 160px !important;
+        width: 157px !important;
         margin: 0 30px;
         .re-item-img{
             margin: 0 0 13px;
-            img{
-                width: 160px;
-            }
         }
     }
     .re-item-description{

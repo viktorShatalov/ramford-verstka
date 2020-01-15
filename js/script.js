@@ -16,7 +16,7 @@ $('.re-info-slider').slick({
 });
 
 $('.re-currentOffers-slider').slick({
-  autoplay: true,
+  autoplay: false,
   infinite: true,
   arrows: true,
   dots: false,
@@ -37,7 +37,7 @@ $('.re-currentOffers-slider').slick({
 });
 
 $('.re-newProduct-items').slick({
-  autoplay: true,
+  autoplay: false,
   infinite: true,
   arrows: false,
   dots: false,

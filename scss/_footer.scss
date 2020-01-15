@@ -36,10 +36,9 @@ footer{
     }
 }
 .re-footer-menu{
-    flex: 1;
     justify-content: space-between;
     nav{
-        margin: 0 0 0 21px;
+        margin: 0 auto;
         h3{
             font-family: 'PT Sans Bold';
             margin: 0 0 13px 0;
@@ -58,6 +57,19 @@ footer{
     }
 }
 .re-footer-map{
+    .re-google-map{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+        iframe{
+            left:0;
+            top:0;
+            height: 240px;
+            width: 410px;
+            position:absolute;
+        }
+    }
     margin: 0 0 0 140px;
     p{
         padding: 0 0px 14px 0px;

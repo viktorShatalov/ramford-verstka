@@ -99,6 +99,10 @@
     @include dspFlex;
     .item-img{
         margin: 0 9px 0 0;
+        img{
+            width: 40px;
+            height: 40px;
+        }
     }
     .re-item-description{
         margin: 0;
@@ -174,6 +178,9 @@
         margin: 0 25px;
         .re-item-img{
             margin: 0 0 13px;
+            img{
+                width: 157px;
+            }
         }
     }
     .re-item-description{
@@ -200,7 +207,7 @@
             margin: -5px 0 0;
             a.anim_btn:link, a.anim_btn:visited {
                 padding: 6px 18px;
-                max-width: 48px;
+                max-width: 42px;
             }
         }
     }
@@ -271,6 +278,9 @@
         margin: 0 30px;
         .re-item-img{
             margin: 0 0 13px;
+            img{
+                width: 157px;
+            }
         }
     }
     .re-item-description{
@@ -297,7 +307,7 @@
             margin: -5px 0 0;
             a.anim_btn:link, a.anim_btn:visited {
                 padding: 6px 18px;
-                max-width: 48px;
+                max-width: 42px;
             }
         }
     }

@@ -7,7 +7,7 @@ $('.re-info-slider').slick({
   autoplaySpeed: 1000,
   responsive: [
     {
-      breakpoint: 1300,
+      breakpoint: 1024,
       settings: {
         dots: false,
       }
@@ -16,7 +16,7 @@ $('.re-info-slider').slick({
 });
 
 $('.re-currentOffers-slider').slick({
-  autoplay: false,
+  autoplay: true,
   infinite: true,
   arrows: true,
   dots: false,
@@ -33,11 +33,20 @@ $('.re-currentOffers-slider').slick({
         arrows: false,
       }
     },
+    {
+      breakpoint: 480,
+      settings: {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    },
   ]
 });
 
 $('.re-newProduct-items').slick({
-  autoplay: false,
+  autoplay: true,
   infinite: true,
   arrows: false,
   dots: false,
@@ -53,16 +62,24 @@ $('.re-newProduct-items').slick({
         slidesToScroll: 1,
       }
     },
+    {
+      breakpoint: 480,
+      settings: {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
   ]
 });
 
 // menu -mobile
-// $(document).ready(function () {
-//     $('.burger-menu').click(function () {
-//         $('.burger-menu,.header-menu').toggleClass('active');
-//         $('body').toggleClass('lock');
-//     })
-// })
+$(document).ready(function () {
+    $('.burger-menu').click(function () {
+        $('.burger-menu,.re-header-menu').toggleClass('active');
+        $('body').toggleClass('lock');
+    })
+})
 
 // timer
 function getTimeRemaining(endtime) {

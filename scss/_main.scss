@@ -57,13 +57,9 @@
         padding: 11px 0 11px 11px;
         margin: 0 0 18px;
     }
-    button{
-        @include button;
-        padding: 11px 0;
-        width: 241px;
-    }
-    button:hover{
-        @include button_hover;
+    a.anim_btn:link, a.anim_btn:visited {
+        padding: 11px 31px 13px 42px;
+        max-width: 166px;
     }
 }
 .re-info-slider{
@@ -208,12 +204,9 @@
         }
         .re-item-action__btn{
             margin: -5px 0 0;
-            button{
-                @include button;
-                padding: 4px 18px;
-                color: $color_signature;
-                @include transition;
-                border: 1px solid $color_footer-bg;
+            a.anim_btn:link, a.anim_btn:visited {
+                padding: 6px 18px;
+                max-width: 48px;
             }
         }
     }
@@ -296,9 +289,6 @@
     .re-item:hover .re-item-description p{
         color: $color_vanilla;
     }
-    .re-item:hover .re-item-action__btn button{
-        @include button_hover;
-    }
     .re-item-description{
         margin: 0 0 45px;
         p{
@@ -321,12 +311,9 @@
         }
         .re-item-action__btn{
             margin: -5px 0 0;
-            button{
-                @include button;
-                border: 1px solid $color_footer-bg;
-                padding: 4px 18px;
-                color: $color_signature;
-                @include transition;
+            a.anim_btn:link, a.anim_btn:visited {
+                padding: 6px 18px;
+                max-width: 48px;
             }
         }
     }
@@ -426,16 +413,19 @@
     margin: 0 34px;
        .re-content-title{
            h2{
+            position: relative;
             margin: 0 0 56px 0;
            }
            h2::after{
-               content: 'Отвечаем в течение 15 минут';
-               font-size: 0.65em;
-               font-weight: normal;
-               color: $color_form-after;
-               margin: 0 0 0 24px;
-           }
-       } 
+            position: absolute;
+            top: 8px;
+            content: 'Отвечаем в течение 15 минут';
+            font-size: 0.65em;
+            font-weight: normal;
+            color: $color_form-after;
+            margin: 0 0 0 24px;
+        }
+    } 
 }
 .re-form-input{
        input{

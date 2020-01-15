@@ -35,19 +35,54 @@ a {
   color: white;
 }
 
+a.anim_btn:link, a.anim_btn:visited {
+  background-color: white;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  color: #3d3d3d;
+  position: relative;
+  display: block;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a.anim_btn:link:after, a.anim_btn:visited:after {
+  content: "";
+  position: absolute;
+  background: none repeat scroll 0 0 #dd6031;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+a.anim_btn:link:hover:after, a.anim_btn:visited:hover:after {
+  height: 500%;
+}
+
+a.anim_btn:link:hover, a.anim_btn:visited:hover {
+  color: white;
+}
+
+a.anim_btn.effekt:after {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
 ul {
   padding: 0;
 }
 
 ul li {
   list-style: none;
-}
-
-.re-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -41px;
-  z-index: 2;
 }
 
 .re-header-row__top {
@@ -232,8 +267,8 @@ ul li {
 
 .re-header-menu ul a {
   color: #3d3d3d;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .re-header-menu ul a:hover {
@@ -248,24 +283,10 @@ ul li {
   padding: 23px 26px 0;
 }
 
-.re-request-call button {
+.re-request-call a.anim_btn:link, .re-request-call a.anim_btn:visited {
+  max-width: 128px;
   padding: 7px 30px;
   font-size: 1.125em;
-  width: 100%;
-  background-color: white;
-  border: 1px solid #b1b1b1;
-  border-radius: 5px;
-  color: #3d3d3d;
-  outline: none;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  cursor: pointer;
-}
-
-.re-request-call button:hover {
-  background-color: #dd6031;
-  color: white;
-  border: 1px solid transparent;
 }
 
 .re-cart {
@@ -362,23 +383,9 @@ ul li {
   margin: 0 0 18px;
 }
 
-.re-counter-form button {
-  background-color: white;
-  border: 1px solid #b1b1b1;
-  border-radius: 5px;
-  color: #3d3d3d;
-  outline: none;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  cursor: pointer;
-  padding: 11px 0;
-  width: 241px;
-}
-
-.re-counter-form button:hover {
-  background-color: #dd6031;
-  color: white;
-  border: 1px solid transparent;
+.re-counter-form a.anim_btn:link, .re-counter-form a.anim_btn:visited {
+  padding: 11px 31px 13px 42px;
+  max-width: 166px;
 }
 
 .re-info-slider {
@@ -435,8 +442,8 @@ ul li {
 .re-navigation-item .re-item-description p {
   color: #3d3d3d;
   font-size: 1.125em;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .re-navigation-item .re-item-description p:hover {
@@ -539,7 +546,6 @@ ul li {
 .re-currentOffers-slider .re-slider-item:hover .re-item-action__btn button {
   background-color: #dd6031;
   color: white;
-  border: 1px solid transparent;
 }
 
 .re-currentOffers-slider .re-item-description {
@@ -548,8 +554,8 @@ ul li {
 
 .re-currentOffers-slider .re-item-description p {
   color: #3d3d3d;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .re-currentOffers-slider .re-item-action {
@@ -576,19 +582,9 @@ ul li {
   margin: -5px 0 0;
 }
 
-.re-currentOffers-slider .re-item-action .re-item-action__btn button {
-  background-color: white;
-  border: 1px solid #b1b1b1;
-  border-radius: 5px;
-  color: #3d3d3d;
-  outline: none;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  cursor: pointer;
-  padding: 4px 18px;
-  color: #7e7e7e;
-  transition: 0.5s ease;
-  border: 1px solid #1d1d1d;
+.re-currentOffers-slider .re-item-action .re-item-action__btn a.anim_btn:link, .re-currentOffers-slider .re-item-action .re-item-action__btn a.anim_btn:visited {
+  padding: 6px 18px;
+  max-width: 48px;
 }
 
 .re-currentOffers-right {
@@ -630,20 +626,23 @@ ul li {
   border: 1px solid #b1b1b1;
   border-radius: 5px;
   color: #3d3d3d;
-  outline: none;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  position: relative;
+  display: block;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   padding: 10px 45px 13px;
   color: #dd6031;
   border: 1px solid #dd6031;
-  transition: 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .re-currentOffers-right__btn button:hover {
   background-color: #dd6031;
   color: white;
-  border: 1px solid transparent;
 }
 
 /* section-newProduct */
@@ -696,20 +695,14 @@ ul li {
   color: #dd6031;
 }
 
-.re-newProduct-items .re-item:hover .re-item-action__btn button {
-  background-color: #dd6031;
-  color: white;
-  border: 1px solid transparent;
-}
-
 .re-newProduct-items .re-item-description {
   margin: 0 0 45px;
 }
 
 .re-newProduct-items .re-item-description p {
   color: #3d3d3d;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .re-newProduct-items .re-item-action {
@@ -736,19 +729,9 @@ ul li {
   margin: -5px 0 0;
 }
 
-.re-newProduct-items .re-item-action .re-item-action__btn button {
-  background-color: white;
-  border: 1px solid #b1b1b1;
-  border-radius: 5px;
-  color: #3d3d3d;
-  outline: none;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  cursor: pointer;
-  border: 1px solid #1d1d1d;
-  padding: 4px 18px;
-  color: #7e7e7e;
-  transition: 0.5s ease;
+.re-newProduct-items .re-item-action .re-item-action__btn a.anim_btn:link, .re-newProduct-items .re-item-action .re-item-action__btn a.anim_btn:visited {
+  padding: 6px 18px;
+  max-width: 48px;
 }
 
 /* section aboutUs */
@@ -871,10 +854,13 @@ ul li {
 }
 
 .re-formApplication-content .re-content-title h2 {
+  position: relative;
   margin: 0 0 56px 0;
 }
 
 .re-formApplication-content .re-content-title h2::after {
+  position: absolute;
+  top: 8px;
   content: 'Отвечаем в течение 15 минут';
   font-size: 0.65em;
   font-weight: normal;
@@ -914,18 +900,21 @@ ul li {
   border: 1px solid #b1b1b1;
   border-radius: 5px;
   color: #3d3d3d;
-  outline: none;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  position: relative;
+  display: block;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
-  transition: 0.5s ease;
+  transition: all 0.3s ease;
   margin: 0 20px 0 0;
 }
 
 .re-form-btn button:hover {
   background-color: #dd6031;
   color: white;
-  border: 1px solid transparent;
 }
 
 .re-form-btn .re-social {
@@ -1004,8 +993,8 @@ ul li {
   height: 235px;
   border-radius: 15px;
   margin: 0;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .re-news-items .re-news-item .re-news-description {
@@ -1109,8 +1098,8 @@ footer {
 }
 
 .re-footer-menu nav ul li a {
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .re-footer-menu nav ul li a:hover {
@@ -1141,6 +1130,9 @@ footer {
 @media (max-width: 767px) {
   html {
     overflow-x: hidden;
+  }
+  .re-header {
+    top: 0;
   }
   .re-header-row__top,
   .re-header-menu,
@@ -1254,6 +1246,20 @@ footer {
     margin: 0 auto 30px;
     text-align: center;
   }
+  .re-formApplication-content .re-content-title h2 {
+    margin: 0 auto 56px;
+    text-align: center;
+  }
+  .re-formApplication-content .re-content-title h2::after {
+    top: 35px;
+    left: 24px;
+  }
+  .re-form-textarea textarea {
+    width: 207px;
+  }
+  .re-formApplication-right {
+    margin: 0 auto -4px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -1316,5 +1322,8 @@ footer {
   .re-info-slider {
     margin: 0 auto 25px;
   }
+  .re-form-input input {
+    margin: 0 35px 18px;
+  }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.min.css.map */

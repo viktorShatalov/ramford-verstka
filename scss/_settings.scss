@@ -1,3 +1,4 @@
+@import '_mixin';
 *{
     margin: 0 auto;
 }
@@ -13,6 +14,22 @@ a{
     text-decoration: none;
     color: $color_white;
 }
+a.anim_btn:link, a.anim_btn:visited {
+    @include button;
+    @include transition;
+}
+a.anim_btn:link:after, a.anim_btn:visited:after {
+    @include a_after;
+}
+a.anim_btn:link:hover:after, a.anim_btn:visited:hover:after {
+    height: 500%;
+}
+a.anim_btn:link:hover, a.anim_btn:visited:hover{
+    color: $color_white;
+}
+a.anim_btn.effekt:after {
+    @include transform;
+} 
 ul{
     padding: 0;
     li{

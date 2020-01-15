@@ -9,21 +9,38 @@
     flex-wrap:wrap;
 } 
 @mixin transition{
-    transition: 0.5s ease;
+    transition: all 0.3s ease;
+}
+@mixin transform {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
 @mixin button{
     background-color: $color_white;
     border: 1px solid rgba(177,177,177,100%);
     border-radius: 5px;
     color: $color_text_menu;
-    outline: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
     @include transition;
     cursor: pointer;
+}
+@mixin a_after {
+    content: "";
+    position: absolute;
+    background: none repeat scroll 0 0 $color_vanilla;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    z-index: -1;
+    @include transition;
 }
 @mixin button_hover{
     background-color:  $color_vanilla;
     color: $color_white;
-    border: 1px solid transparent;
 }
 @mixin background {
     background-color: $color_white;

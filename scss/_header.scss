@@ -1,8 +1,8 @@
-.re-header{
-    position: sticky;
-    top: -41px;
-    z-index: 2;
-}
+// .re-header{
+//     position: sticky;
+//     top: -41px;
+//     z-index: 2;
+// }
 .re-header-row__top{
     background-color: $color_vanilla;
     .re-conteiner{
@@ -140,14 +140,10 @@
 }
 .re-request-call{
     padding: 23px 26px 0;
-    button{
+    a.anim_btn:link, a.anim_btn:visited {
+        max-width: 128px;
         padding: 7px 30px;
         font-size: 1.125em;
-        width: 100%;
-        @include button;
-    }
-    button:hover{
-        @include button_hover;
     }
 }
 .re-cart{

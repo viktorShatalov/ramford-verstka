@@ -58,7 +58,7 @@
             padding: 0 0 0 55px;
         }
         a{
-            color: rgba(0,111,255,100);
+            color: $color_link;
             font-weight: normal;
             padding: 0 5px;
         }
@@ -138,9 +138,11 @@
             }
         }
 }
-.burger-menu{
+// mobile-menu
+.burger, .re-mobile-menu{
     display: none;
 }
+// end mobile-menu
 .re-request-call{
     margin: 23px 40px 0 0;
     a.anim_btn:link, a.anim_btn:visited {

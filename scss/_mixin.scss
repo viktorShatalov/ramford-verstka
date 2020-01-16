@@ -11,6 +11,9 @@
 @mixin transition{
     transition: all 0.3s ease;
 }
+@mixin transition-modal{
+    transition: all 0.2s ease-in-out;
+}
 @mixin transform {
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
@@ -82,7 +85,6 @@
     box-shadow: 0 3px 3px $color_box-shadow;
 }
 @mixin input {
-    
     padding: 11px;
     border-radius: 5px;
     border: 1px solid $color_vanilla;

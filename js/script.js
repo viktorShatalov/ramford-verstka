@@ -75,10 +75,10 @@ $('.re-newProduct-items').slick({
 
 // menu -mobile
 $(document).ready(function () {
-    $('.burger-menu').click(function () {
-        $('.burger-menu,.re-header-menu').toggleClass('active');
-        $('body').toggleClass('lock');
-    })
+  $('.burger').click(function () {
+    $('.burger,.re-mobile-menu').toggleClass('active');
+    $('body').toggleClass('lock');
+  })
 })
 
 // timer
@@ -123,3 +123,41 @@ function initializeClock(id, endtime) {
 
 var deadline = new Date(Date.parse(new Date()) + 3 * 24 * 60 * 60 * 1000); // for endless timer
 initializeClock('countdown', deadline);
+
+// modal
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('re-overlay');
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.re-modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.re-modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}

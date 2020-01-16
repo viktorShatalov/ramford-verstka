@@ -26,6 +26,33 @@
 </head>
 
 <body>
+    <!-- modal -->
+    <div class="re-modal" id="re-modal">
+        <div class="re-modal-header"></div>
+        <div class="re-modal-body">
+            <div class="re-modal-title">
+                <h2>
+                    Перезвоним в течение 15 минут!
+                </h2>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <form action="post" class="re-modal-form">
+                <div class="re-form-input">
+                    <input type="text" placeholder="Имя">
+                    <input type="tel" placeholder="Телефон">
+                    <input type="button" value="Отправить">
+                </div>
+                <div class="form-modal-description">
+                    <p>
+                        Нажимая кнопку, Вы соглашаетесь c условиями
+                        <a href="#"> политики конфиденциальности.</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="re-overlay"></div>
+
     <!-- header -->
     <header class="re-header">
         <div class="re-header-row">
@@ -74,7 +101,7 @@
                     <nav class="re-header-menu">
                         <ul>
                             <li>
-                                <a href="#"> Главная</a>
+                                <a href="#">Главная</a>
                             </li>
                             <li>
                                 <a href="#">Каталог</a>
@@ -87,8 +114,41 @@
                             </li>
                         </ul>
                     </nav>
-                    <nav class="burger-menu">
+                    <div class="burger">
                         <span></span>
+                    </div>
+                    <nav class="re-mobile-menu">
+                        <ul>
+                            <a href="#">
+                                <li>
+                                    <div class="re-location__mobile">
+                                        <p id="user-city"></p>
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="tel:8 800 505-61-36">
+                                <li>
+                                    <div class="re-phone__mobile">
+                                        <p>8 800 505-61-36</p>
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>Главная</li>
+                            </a>
+                            <a href="#">
+                                <li>Каталог</li>
+                            </a>
+                            <a href="#">
+                                <li>О нас </li>
+                            </a>
+                            <a href="#">
+                                <li>Контакты</li>
+                            </a>
+                            <div class="re-request-call__mobile">
+                                <a href="#" class="anim_btn effekt">Заказать звонок</a>
+                            </div>
+                        </ul>
                     </nav>
                     <div class="re-request-call">
                         <a href="#" class="anim_btn effekt">Заказать звонок</a>
@@ -401,7 +461,7 @@
                         </ul>
                     </div>
                     <div class="re-currentOffers-right__btn">
-                        <a href="#" class="anim_btn effekt">Обсудить проект</a>
+                        <a href="#" data-modal-target="#re-modal" class="anim_btn effekt">Обсудить проект</a>
                     </div>
                 </div>
             </div>
@@ -756,12 +816,12 @@
                             </ul>
                         </nav>
                         <div class="re-footer-map">
-                            <p>Адрес офиса: ул. Советская, д.23, оф. 18 (с 9:00 - 21:00 МСК)</p>
+                            <p>20050, Екатеринбург, ул. Расточная, 15/4-17 (с 9:00 - 21:00 МСК)</p>
                             <div class="re-google-map">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2181.533560006302!2d60.63106951544248!3d56.853944313995335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16dd3f66dd4f3%3A0xa594eeeabe17b0fd!2z0YPQuy4g0KHQvtCy0LXRgtGB0LrQsNGPLCAyMywg0JXQutCw0YLQtdGA0LjQvdCx0YPRgNCzLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCA2MjAwNDE!5e0!3m2!1sru!2sua!4v1579117574351!5m2!1sru!2sua"
-                                    width="440" height="240" frameborder="0" style="border:0;"
-                                    allowfullscreen=""></iframe>
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2180.1872172822946!2d60.50571731544358!3d56.877032912191936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c171d2669ab0a9%3A0x4a61dba8dc1b026f!2z0YPQuy4g0KDQsNGB0YLQvtGH0L3QsNGPLCAxNS80LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDA1MA!5e0!3m2!1sru!2sua!4v1579179829322!5m2!1sru!2sua"
+                                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="">
+                                </iframe>
                             </div>
                         </div>
                     </div>

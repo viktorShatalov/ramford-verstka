@@ -161,3 +161,43 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+
+// Matrix
+const t = [
+  'Wake up, MARCUS...\n',
+  'The Matrix has you...\n',
+  'Follow the white rabbit.',
+]
+
+function tepyText() {
+  let line = 0;
+  let count = 0;
+  let out = '';
+  let htmlOut = document.querySelector('.out');
+
+  function typeLine() {
+      let interval = setTimeout(function () {
+          out += t[line][count];
+          htmlOut.innerHTML = out + '|';
+          count++;
+          // Проверки
+          if (count >= t[line].length) {
+              count = 0;
+              line++;
+              if (line == t.length) {
+                  clearTimeout(interval);
+                  htmlOut.innerHTML = out;
+                  return true;
+              }
+          }
+          typeLine();
+      },getRandomInt(getRandomInt(250) * 2.5) )
+  }
+  typeLine();
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+tepyText();

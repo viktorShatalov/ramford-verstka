@@ -1326,7 +1326,6 @@ footer {
   .re-header-row__top,
   .re-header-menu,
   .re-request-call,
-  .re-currentOffers-right,
   .re-currentOffers-left::before,
   .re-currentOffers-left::after {
     display: none;
@@ -1493,6 +1492,9 @@ footer {
   .re-newProduct-items .re-item {
     margin: 0 13px;
   }
+  .re-newProduct-content {
+    padding: 20px 10px;
+  }
   .re-newProduct-content .re-newProduct__title h2 {
     margin: 0 auto 33px;
     text-align: center;
@@ -1502,8 +1504,8 @@ footer {
         flex-wrap: wrap;
   }
   .re-currentOffers-left {
-    padding: 20px 0px;
-    margin: 0 auto;
+    padding: 20px 10px;
+    margin: 0 auto 30px;
   }
   .re-currentOffers-left .re-currentOffers-left__title {
     margin: 0 auto;
@@ -1530,9 +1532,6 @@ footer {
   .re-news .re-news-row .re-news-title h2 {
     margin: 0 auto 30px;
     text-align: center;
-  }
-  .re-newProduct-content {
-    padding: 20px 0px;
   }
   .re-formApplication-content .re-content-title h2 {
     margin: 0 auto 56px;
@@ -1604,7 +1603,7 @@ footer {
 
 @media (max-width: 375px) {
   .re-info-block .re-conteiner .re-info-left {
-    padding: 24px 20px;
+    padding: 24px 40px;
   }
 }
 

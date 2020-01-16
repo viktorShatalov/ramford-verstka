@@ -12,7 +12,6 @@
     .re-header-row__top,
     .re-header-menu,
     .re-request-call,
-    .re-currentOffers-right,
     .re-currentOffers-left::before, 
     .re-currentOffers-left::after
     {
@@ -180,6 +179,7 @@
         }
     }
     .re-newProduct-content{
+        padding: 20px 10px;
         .re-newProduct__title{
             h2{
                 margin: 0 auto 33px;
@@ -193,8 +193,8 @@
         }
     } 
     .re-currentOffers-left{
-        padding: 20px 0px;
-        margin: 0 auto;
+        padding: 20px 10px;
+        margin: 0 auto 30px;
         .re-currentOffers-left__title{
             margin: 0 auto;
             h2{
@@ -229,9 +229,6 @@
             }
         }
     }  
-    .re-newProduct-content{
-        padding: 20px 0px;
-    }
     .re-formApplication-content{
            .re-content-title{
                h2{
@@ -304,10 +301,7 @@
     }
 }
 
-@media (max-width: 425px){
-}
 @media (max-width: 414px){
-    
     .re-info-block{
         .re-conteiner{
             .re-info-left{
@@ -323,7 +317,7 @@
     .re-info-block{
         .re-conteiner{
             .re-info-left{
-                padding: 24px 20px;
+                padding: 24px 40px;
             }
         }
     }  

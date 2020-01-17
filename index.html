@@ -26,21 +26,57 @@
 </head>
 
 <body>
+    <!-- arthboard modal -->
+    <div class="re-modal__arthboard" id="re-modal__arthboard">
+        <button data-close-button class="close-button">&times;</button>
+        <div class="re-modal-header">
+            <div class="re-modal-title">
+                <h2>
+                    Уже уходите?
+                </h2>
+                <p>
+                    Поможем подобрать правильный камин. <br> Всего 10 минут и Вы узнаете какой камин подойдет именно
+                    Вам!
+                </p>
+            </div>
+        </div>
+        <div class="re-modal-body">
+            <form action="post" class="re-modal-form__arthboard">
+                <div class="re-form-input__modal">
+                    <input type="tel" placeholder="Телефон">
+                    <div class="social">
+                        <label><input type="radio" checked name="social">По телефону</label>
+                        <label><input type="radio" name="social">В whats'ap, VIber и т.д.</label>
+                    </div>
+                    <input data-close-button type="button" value="Отправить">
+                </div>
+                <div class="form-modal-description">
+                    <p>
+                        Нажимая кнопку, Вы соглашаетесь c условиями
+                        <a href="#"> политики конфиденциальности.</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="re-overlay"></div>
+
     <!-- modal -->
     <div class="re-modal" id="re-modal">
-        <div class="re-modal-header"></div>
-        <div class="re-modal-body">
+        <div class="re-modal-header">
+            <button data-close-button class="close-button">&times;</button>
             <div class="re-modal-title">
                 <h2>
                     Перезвоним в течение 15 минут!
                 </h2>
-                <button data-close-button class="close-button">&times;</button>
             </div>
+        </div>
+        <div class="re-modal-body">
             <form action="post" class="re-modal-form">
-                <div class="re-form-input">
+                <div class="re-form-input__modal">
                     <input type="text" placeholder="Имя">
                     <input type="tel" placeholder="Телефон">
-                    <input type="button" value="Отправить">
+                    <input data-close-button type="button" value="Отправить">
                 </div>
                 <div class="form-modal-description">
                     <p>
@@ -70,7 +106,6 @@
                             </a>
                         </div>
                     </div>
-                    <pre id="pre" class="out"></pre>
                     <div class="re-top-right">
                         <div class="re-location">
                             <p id="user-city"></p>
@@ -147,12 +182,12 @@
                                 <li>Контакты</li>
                             </a>
                             <div class="re-request-call__mobile">
-                                <a href="#" class="anim_btn effekt">Заказать звонок</a>
+                                <a href="#" data-modal-target="#re-modal" class="anim_btn effekt">Заказать звонок</a>
                             </div>
                         </ul>
                     </nav>
                     <div class="re-request-call">
-                        <a href="#" class="anim_btn effekt">Заказать звонок</a>
+                        <a href="#" data-modal-target="#re-modal" class="anim_btn effekt">Заказать звонок</a>
                     </div>
                     <div class="re-cart">
                         <a href="#">
@@ -753,7 +788,7 @@
                 </div>
                 <div class="re-footer-row__center">
                     <div class="re-footer-menu">
-                        <nav class="re-menu-column__left">
+                        <nav class="re-menu-column">
                             <h3>Каталог</h3>
                             <ul>
                                 <li>
@@ -782,7 +817,7 @@
                                 </li>
                             </ul>
                         </nav>
-                        <nav class="re-menu-column__center">
+                        <nav class="re-menu-column">
                             <h3>Меню</h3>
                             <ul>
                                 <li>
@@ -799,7 +834,7 @@
                                 </li>
                             </ul>
                         </nav>
-                        <nav class="re-menu-column__right">
+                        <nav class="re-menu-column">
                             <h3>Покупателям</h3>
                             <ul>
                                 <li>
@@ -817,7 +852,21 @@
                             </ul>
                         </nav>
                         <div class="re-footer-map">
-                            <p>20050, Екатеринбург, ул. Расточная, 15/4-17 (с 9:00 - 21:00 МСК)</p>
+                            <div class="re-footer-mobile__location">
+                                <div class="re-top-right">
+                                    <div class="re-location">
+                                        <a href="#">
+                                            <p id="user-city"></p>
+                                        </a>
+                                    </div>
+                                    <div class="re-phone">
+                                        <a href="tel:8 800 505-61-36">
+                                            <p>8 800 505-61-36</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="re-adress">20050, Екатеринбург, ул. Расточная, 15/4-17 (с 9:00 - 21:00 МСК)</p>
                             <div class="re-google-map">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2180.1872172822946!2d60.50571731544358!3d56.877032912191936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c171d2669ab0a9%3A0x4a61dba8dc1b026f!2z0YPQuy4g0KDQsNGB0YLQvtGH0L3QsNGPLCAxNS80LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDA1MA!5e0!3m2!1sru!2sua!4v1579179829322!5m2!1sru!2sua"

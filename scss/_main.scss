@@ -249,7 +249,9 @@
         border: 1px solid $color_vanilla;
     }
 }
-.re-modal{
+// modal**************************************************
+.re-modal,
+.re-modal__arthboard{
     position: fixed;
     top:50%;
     left: 50%;
@@ -261,46 +263,69 @@
     width: 825px;
     max-width: 75%;
     @include transition-modal;
+}
+.re-modal__arthboard{
     .re-modal-title{
-        display: flex;
-        justify-content: space-between;
+        max-width: 520px;
+        text-align: center;
+        margin-bottom: 30px;
         h2{
-            margin: 10px 10px 40px;
-        }
-        .close-button{
-            cursor: pointer;
-            background:none;
-            border: none;
-            outline: none;
-            font-size: 3em;
-            font-weight: normal;
-            height: 1px;
-            margin-top: -20px;
+            margin: 10px 0 20px;
         }
     }
 }
-.re-modal.active{
+.re-modal-title{
+    h2{
+        margin: 10px 0 40px;
+    }
+}
+.close-button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background:none;
+    border: none;
+    outline: none;
+    font-size: 3em;
+    line-height: 20px;
+}
+.re-modal.active, .re-modal__arthboard.active{
     transform: translate(-50%,-50%) scale(1);
 }
-.re-modal-form{
-    .re-form-input{
-        @include dspFlex;
-        justify-content: space-between;
-        margin-bottom: 40px;
-        input{
-            @include input;
-            padding: 17px 10px;
+.re-modal-form__arthboard{
+    .re-form-input__modal{
+        .social{
+            @include dspFlex;
+            flex-direction: column;
+            label{
+                width: 246px;
+                margin: 5px auto;
+                input{
+                    width: 20px;
+                }
+            }
         }
-        input::placeholder{
-            font-size: .8em;
-        }
-        input[type="button"]{
-            color: $color_white;
-            border: none;
-            background-color: $color_yellow;
-            height: 54px;
-            width: 231px;
-        }
+    }
+}
+.re-form-input__modal{
+    @include dspFlex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    input{
+        @include input;
+        padding: 17px 10px;
+        width: 209px;
+    }
+    input::placeholder{
+        font-size: .8em;
+    }
+    input[type="button"]{
+        color: $color_white;
+        border: none;
+        background-color: $color_yellow;
+        height: 54px;
+        width: 231px;
     }
 }
 .form-modal-description{
@@ -501,12 +526,11 @@
     } 
 }
 .re-form-input{
-       input{
-            width: 209px;
-           @include input;
-           margin: 0 17px 18px 0;
-       }
-       
+    input{
+        width: 209px;
+        @include input;
+        margin: 0 17px 18px 0;
+    }  
 }
 .re-form-textarea{
     textarea{

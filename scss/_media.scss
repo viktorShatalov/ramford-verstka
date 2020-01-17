@@ -12,8 +12,10 @@
     .re-header-row__top,
     .re-header-menu,
     .re-request-call,
+    .re-currentOffers-right,
     .re-currentOffers-left::before, 
-    .re-currentOffers-left::after
+    .re-currentOffers-left::after,
+    .re-footer-row__top .re-top-right
     {
         display: none;
     }
@@ -36,7 +38,19 @@
         left: -20%;
         top: -10px;
     }
-    
+    .re-form-input__modal input{
+        margin-bottom: 15px;
+        width: 255px;
+    }
+    .re-form-input__modal input[type="button"]{
+        width: 275px;
+    }
+    .re-modal-title h2{
+        font-size: 2em;
+    }
+    .form-modal-description p{
+        font-size: 0.85em;
+    }
     .re-mobile-menu{
         display: block;
         position: fixed;
@@ -51,7 +65,7 @@
             color: $color_text_menu;
         }
         a.anim_btn:link, a.anim_btn:visited{
-            padding: 5% 20%;
+            padding: 3% 20%;
             max-width: 37%;
             font-size: 1.125em;
             margin-top: 20px;
@@ -152,7 +166,7 @@
             margin: 90px auto 22px;
             .re-info-left{
                 flex: 1;
-                margin: 0 auto;
+                margin: 0;
                 width: auto;
             }
         }
@@ -161,8 +175,14 @@
         margin: 0 auto;
         input{
             margin: 0 auto 18px;
+            width: 280px;
         }
     }  
+    .re-counter-form a.anim_btn:link, .re-counter-form a.anim_btn:visited{
+        padding: 11px 72px 13px;
+        max-width: 145px;
+        margin: 0;
+    }
     .re-info-slider{
         max-width: 300px;
         margin: 0 auto 25px;
@@ -173,9 +193,9 @@
         }
     }
     .re-newProduct-items{
-        max-width: 300px;
+        max-width: 355px;
         .re-item{
-            margin: 0 13px;
+            margin: 0 25px;
         }
     }
     .re-newProduct-content{
@@ -204,10 +224,10 @@
     } 
     
     .re-currentOffers-slider{
-        max-width: 300px;
-        margin: 0 auto;
+        max-width: 355px;
+        margin: 0;
         .re-slider-item{
-            margin: 0 13px;
+            margin: 0 25px;
         }
     }
     .re-aboutUs-items{
@@ -237,7 +257,7 @@
                }
                h2::after{
                 top: 35px;
-                left: 19%;
+                left: 11%;
                 margin: 0 auto;
             }
         } 
@@ -255,27 +275,44 @@
         margin: 0 auto -4px;
     }
     .re-footer-row__top{
-        flex-wrap: nowrap;
-    }
-    
-    .re-footer-row__top{
         position: relative;
-        .re-top-right{
-            position: absolute;
-            .re-location{
-            }
-            .re-phone{
-            }
-        }
+        flex-wrap: nowrap;
         .re-footer-logo{
-            margin: 0 0 0 30px;
+            margin: 0 0 0 7%;
             img{
                 width: 142px;
             }
         }
     }
+    .re-footer-row__center{
+        padding: 0 0 35px;
+        .re-footer-menu{
+            flex-direction: column;
+            padding: 0;
+            .re-menu-column{
+                margin: 0;
+                border-bottom: 1px solid $color_footer-row;
+                h3{
+                    position: relative;
+                    margin: 15px 7%;
+                }
+                h3::after{
+                    content: url(../img/footer-icon-btn.png);
+                    position: absolute;
+                    right: 0;
+                }
+                ul li{
+                   margin: 0 0 0 7%;
+                }
+            }
+        }
+    }
     
     .re-footer-map{
+        margin: 0 auto;
+        .re-adress{
+            margin: 0 10%;
+        }
         p{
             width: 245px;
         }
@@ -286,10 +323,21 @@
                 width: 360px;
             }
         }
-        margin: 0 auto;
-    }
-    .re-info-slider{
-        margin: 0 auto 25px;
+        .re-top-right{
+            padding: 15px 0 0;
+            .re-location, .re-phone{
+                margin: 8px auto 0px;
+            }
+            .re-phone::before{
+                left: 33px;
+            }
+            #user-city::before{
+                left: -30px;
+            }
+        }
+        .re-footer-mobile__location{
+            display: block;
+        }
     }
     .re-content-form{
         width: 233px;
@@ -322,11 +370,20 @@
         }
     }  
 }
-
 @media (max-width: 360px){
+    .re-footer-map .re-top-right .re-phone::before{
+        left: 27px;
+    }
 }
+
 @media (max-width: 320px){
     .re-info-slider{
         margin: 0 auto 25px;
+    }
+    .re-footer-map .re-top-right .re-phone::before{
+        left: 9px;
+    }
+    .re-info-block .re-conteiner .re-info-left{
+        padding: 24px 15px;
     }
 }

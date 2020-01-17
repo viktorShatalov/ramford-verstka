@@ -1,3 +1,6 @@
+.re-footer-mobile__location{
+    display: none;
+}
 footer{
     color: $color_white;
 }
@@ -38,7 +41,6 @@ footer{
 .re-footer-menu{
     justify-content: space-between;
     nav{
-        margin: 0 auto;
         h3{
             font-family: 'PT Sans Bold';
             margin: 0 0 13px 0;

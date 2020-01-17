@@ -219,6 +219,7 @@
             margin: 0 auto;
             h2{
                 padding: 0 5px;
+                margin: 0 33px 33px;
             }
         }
     } 
@@ -347,6 +348,20 @@
             margin-bottom: 10px;
         }
     }
+    // deliveryPage
+    .re-breadcumbs{
+        margin: 80px auto 10px;
+    }
+    .re-delivery-row{
+        margin: 20px auto 30px;
+        p{
+            line-height: 20px;
+            font-size: 1.125em;
+        }
+    }
+    .sub-head{
+        margin: 15px 0;
+    }
 }
 
 @media (max-width: 414px){
@@ -386,4 +401,11 @@
     .re-info-block .re-conteiner .re-info-left{
         padding: 24px 15px;
     }
+    .re-currentOffers-left{
+        .re-currentOffers-left__title{
+            h2{
+                margin: 0 0 33px;
+            }
+        }
+    } 
 }

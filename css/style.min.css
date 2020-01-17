@@ -1222,6 +1222,255 @@ ul li {
   content: url(../img/news_image-Kamin.png);
 }
 
+.re-delivery .re-conteiner {
+  padding: 0 10px;
+}
+
+.re-breadcumbs {
+  margin: 15px auto 30px;
+}
+
+.re-breadcumbs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.re-breadcumbs ul li {
+  margin: 0 10px 0 0;
+}
+
+.re-breadcumbs ul li a {
+  color: #3d3d3d;
+}
+
+.re-breadcumbs ul li:first-child {
+  font-weight: bold;
+}
+
+.re-delivery-row {
+  margin: 50px auto 70px;
+}
+
+.re-delivery-row p {
+  line-height: 35px;
+  font-size: 1.125em;
+}
+
+.sub-head {
+  margin: 55px 0;
+}
+
+.re-category-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.re-category-left__sidebar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 23%;
+          flex: 1 1 23%;
+  height: 100%;
+  margin: 0 25px 0 0;
+}
+
+.re-category-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 10%;
+  margin: 0 0 29px;
+}
+
+.re-category-sidebar .re-sidebar-help p {
+  width: 57%;
+  font-size: 1.125em;
+  color: white;
+  background-color: #dd6031;
+  border-radius: 5px;
+  padding: 5% 22.5%;
+  margin: 0 0 10%;
+}
+
+.re-sidebar-filtr a {
+  color: #3d3d3d;
+  font-size: 1.125em;
+  position: absolute;
+  top: 10px;
+  left: 20%;
+}
+
+.re-sidebar-filtr ul li {
+  position: relative;
+  margin: 0 0 10%;
+}
+
+.re-sidebar-filtr ul li::before {
+  width: 40px;
+  height: 40px;
+}
+
+.re-sidebar-filtr ul li:nth-child(1)::before {
+  content: url(../img/icon-electro.png);
+}
+
+.re-sidebar-filtr ul li:nth-child(2)::before {
+  content: url(../img/icon-kamin.png);
+}
+
+.re-sidebar-filtr ul li:nth-child(3)::before {
+  content: url(../img/icon-portal.png);
+}
+
+.re-sidebar-filtr ul li:nth-child(4)::before {
+  content: url(../img/icon-ochagi.png);
+}
+
+.re-sidebar-filtr ul li:nth-child(5)::before {
+  content: url(../img/icon-pechi.png);
+}
+
+.re-sidebar-filtr ul li:nth-child(6)::before {
+  content: url(../img/icon-heater.png);
+}
+
+.re-sidebar-filtr ul li:nth-child(7)::before {
+  content: url(../img/icon-accesuary.png);
+}
+
+.re-sidebar-filtr ul li:nth-child(8)::before {
+  content: url(../img/icon-montag.png);
+}
+
+.re-sidebar-filtr ul li::after {
+  content: url(../img/arrowDown-filtr.png);
+  position: absolute;
+  right: 0;
+  top: 20%;
+}
+
+.re-category-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 77%;
+          flex: 1 1 77%;
+}
+
+.re-sortBy {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 0 0 30px;
+  padding: 20px;
+  text-align: right;
+}
+
+.re-sortBy p {
+  margin-right: 3%;
+}
+
+.re-sortBy p::after {
+  content: url(../img/icon-sort.png);
+  cursor: pointer;
+}
+
+.re-sortBy a {
+  color: #006fff;
+}
+
+.re-categoty-product__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.re-categoty-product__item {
+  margin: 0 0 3%;
+  padding: 2% 3% 0;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.re-categoty-product__item .re-item-img {
+  margin: 0 0 13px;
+}
+
+.re-categoty-product__item .re-item-img img {
+  width: 207px;
+}
+
+.re-categoty-product__item .re-item-description {
+  margin: 0 0 45px;
+}
+
+.re-categoty-product__item .re-item-description p {
+  color: #3d3d3d;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.re-categoty-product__item .re-item-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 25px;
+}
+
+.re-categoty-product__item .re-item-action .re-item-price {
+  margin: 0;
+}
+
+.re-categoty-product__item .re-item-action .re-item-price p {
+  color: #7e7e7e;
+}
+
+.re-categoty-product__item .re-item-action .re-item-price p span {
+  font-weight: bold;
+  color: #3d3d3d;
+}
+
+.re-categoty-product__item .re-item-action .re-item-action__btn {
+  margin: 0;
+}
+
+.re-categoty-product__item .re-item-action .re-item-action__btn a.anim_btn:link, .re-categoty-product__item .re-item-action .re-item-action__btn a.anim_btn:visited {
+  padding: 8px 31px;
+  max-width: 50px;
+}
+
 .re-footer-mobile__location {
   display: none;
 }
@@ -1564,6 +1813,7 @@ footer {
   }
   .re-currentOffers-left .re-currentOffers-left__title h2 {
     padding: 0 5px;
+    margin: 0 33px 33px;
   }
   .re-currentOffers-slider {
     max-width: 355px;
@@ -1678,6 +1928,19 @@ footer {
   .re-social p {
     margin-bottom: 10px;
   }
+  .re-breadcumbs {
+    margin: 80px auto 10px;
+  }
+  .re-delivery-row {
+    margin: 20px auto 30px;
+  }
+  .re-delivery-row p {
+    line-height: 20px;
+    font-size: 1.125em;
+  }
+  .sub-head {
+    margin: 15px 0;
+  }
 }
 
 @media (max-width: 414px) {
@@ -1710,6 +1973,9 @@ footer {
   }
   .re-info-block .re-conteiner .re-info-left {
     padding: 24px 15px;
+  }
+  .re-currentOffers-left .re-currentOffers-left__title h2 {
+    margin: 0 0 33px;
   }
 }
 /*# sourceMappingURL=style.min.css.map */

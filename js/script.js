@@ -4,7 +4,7 @@ $('.re-info-slider').slick({
   infinite: true,
   arrows: false,
   dots: true,
-  autoplaySpeed: 1000,
+  autoplaySpeed: 1800,
   responsive: [
     {
       breakpoint: 1024,
@@ -23,6 +23,8 @@ $('.re-currentOffers-slider').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplaySpeed: 1500,
+  centerMode: true,
+  variableWidth: true,
   responsive: [
     {
       breakpoint: 1024,
@@ -53,6 +55,8 @@ $('.re-newProduct-items').slick({
   autoplaySpeed: 1800,
   slidesToShow: 5,
   slidesToScroll: 1,
+  centerMode: true,
+  variableWidth: true,
   responsive: [
     {
       breakpoint: 1024,
@@ -115,6 +119,7 @@ function initializeClock(id, endtime) {
     if (t.total <= 0) {
       clearInterval(timeinterval);
     }
+
   }
 
   updateClock();
@@ -166,6 +171,7 @@ function closeModal(modal) {
 
 $(".re-menu-column ul li").hide();
 $(".re-menu-column h3").click(
-  function(){
-  $(".re-menu-column ul li").toggle('slow')}
+  function () {
+    $(".re-menu-column ul li").toggle('slow')
+  }
 );

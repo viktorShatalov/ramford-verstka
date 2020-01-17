@@ -1,0 +1,145 @@
+.re-category-row{
+    @include dspFlex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.re-category-left__sidebar{
+    flex: 1 1 23%;
+    height: 100%;
+    margin: 0 25px 0 0;
+}
+.re-category-sidebar{
+    position: sticky;
+    top: 100px;
+    height: 100%;
+    @include background;
+    padding: 10%;
+    margin: 0 0 29px;
+    .re-sidebar-help{
+        p{
+            width: 57%;
+            font-size: 1.125em;
+            color: $color_white;
+            background-color: $color_vanilla;
+            border-radius: 5px;
+            padding: 5% 22.5%;
+            margin: 0 0 10%;
+        }
+    }
+}
+.re-sidebar-filtr{
+    a{
+        color: $color_text_menu;
+        font-size: 1.125em;
+        position: absolute;
+        top: 10px;
+        left: 20%;
+    }
+    ul{
+        li{
+            position: relative;
+            margin: 0 0 10%;
+        }
+        li::before{
+            width: 40px;
+            height: 40px;
+        }
+        li:nth-child(1)::before{
+            content: url(../img/icon-electro.png);
+        }
+        li:nth-child(2)::before{
+            content: url(../img/icon-kamin.png);
+        }
+        li:nth-child(3)::before{
+            content: url(../img/icon-portal.png);
+        }
+        li:nth-child(4)::before{
+            content: url(../img/icon-ochagi.png);
+        }
+        li:nth-child(5)::before{
+            content: url(../img/icon-pechi.png);
+        }
+        li:nth-child(6)::before{
+            content: url(../img/icon-heater.png);
+        }
+        li:nth-child(7)::before{
+            content: url(../img/icon-accesuary.png);
+        }
+        li:nth-child(8)::before{
+            content: url(../img/icon-montag.png);
+        }
+        li::after{
+            content: url(../img/arrowDown-filtr.png);
+            position: absolute;
+            right: 0;
+            top: 20%;
+        }
+    }
+}
+.re-sidebar-down{
+}
+.re-category-content{
+    flex: 1 1 77%;
+}
+.re-sortBy{
+    @include background;
+    margin: 0 0 30px;
+    padding: 20px;
+    text-align: right;
+    p{
+        margin-right: 3%;
+    }
+    p::after{
+        content: url(../img/icon-sort.png);
+        cursor: pointer;
+    }
+    a{
+        color: $color_link;
+    }
+}
+.re-categoty-product__items{
+    @include dspFlex;
+    justify-content: space-between;
+}
+.re-categoty-product__item{
+    margin: 0 0 3%;
+    padding: 2% 3% 0;
+    @include background;
+    .re-item-img{
+        margin: 0 0 13px;
+        img{
+            width: 207px;
+        }
+    }
+    .re-item-description{
+        margin: 0 0 45px;
+        p{
+            color: $color_text_menu;
+            @include transition;
+        }
+    }
+    .re-item-action{
+        @include dspFlex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 25px;
+        .re-item-price{
+            margin: 0;
+            p{
+                color: $color_signature;
+                span{
+                    font-weight: bold;
+                    color: $color_text_menu;
+                }
+            }
+        }
+        .re-item-action__btn{
+            margin: 0;
+            a.anim_btn:link, a.anim_btn:visited {
+                padding: 8px 31px;
+                max-width: 50px;
+            }
+        }
+    }
+}

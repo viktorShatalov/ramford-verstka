@@ -350,7 +350,7 @@
     }
     // deliveryPage
     .re-breadcumbs{
-        margin: 80px auto 10px;
+        margin: 80px 10px 10px;
     }
     .re-delivery-row{
         margin: 20px auto 30px;
@@ -361,6 +361,20 @@
     }
     .sub-head{
         margin: 15px 0;
+    }
+    // category page
+    .re-category-left__sidebar{
+        margin: 0 auto;
+    }
+    .re-category-row{
+        flex-wrap: wrap;
+    }
+    .re-categoty-product__item{
+        margin: 0 auto 8%;
+        padding: 2% 8% 0;
+    }
+    .re-sortBy{
+        text-align: center;
     }
 }
 

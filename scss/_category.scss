@@ -4,57 +4,28 @@
     justify-content: space-between;
 }
 .re-category-left__sidebar{
-    flex: 1 1 26%;
+    flex: 1 1 23%;
     height: 100%;
     margin: 0 25px 0 0;
 }
-.re-category-sidebar,.re-sidebar-down{
-    // position: sticky;
-    // top: 100px;
+.re-category-sidebar{
+    position: sticky;
+    top: 100px;
     height: 100%;
     @include background;
-    padding: 9% 7.5%;
+    padding: 10%;
     margin: 0 0 29px;
-    .re-sidebar-help__btn{
-        button{
-            border: none;
-            outline: none;
+    .re-sidebar-help{
+        p{
+            width: 57%;
             font-size: 1.125em;
             color: $color_white;
             background-color: $color_vanilla;
             border-radius: 5px;
-            padding: 5% 19.5%;
+            padding: 5% 22.5%;
             margin: 0 0 10%;
-            max-width: 100%;
-            width: 100%;
-            cursor: pointer;
         }
     }
-}
-.re-sidebar-down{
-       .re-sidebar-down__title{
-           h2{
-              font-size: 1.875em;
-              text-align: center;
-              color: $color_brown; 
-           }
-       }
-       .re-sidebar-down__img{
-           text-align: center;
-           margin: 12px auto;
-           img{
-               width: 146px;
-               height: 146px;
-           }
-       }
-       .re-sidebar-down__btn{
-            a.anim_btn:link, a.anim_btn:visited{
-                max-width: 142px;
-                width: 100%;
-                padding: 10px 54px 13px;
-                font-size: 1.125em;
-            }
-       }
 }
 .re-sidebar-filtr{
     a{
@@ -105,8 +76,10 @@
         }
     }
 }
+.re-sidebar-down{
+}
 .re-category-content{
-    flex: 1 1 74%;
+    flex: 1 1 77%;
 }
 .re-sortBy{
     @include background;
@@ -165,8 +138,7 @@
             margin: 0;
             a.anim_btn:link, a.anim_btn:visited {
                 padding: 8px 31px;
-                max-width: 43px;
-                width: 100%;
+                max-width: 50px;
             }
         }
     }

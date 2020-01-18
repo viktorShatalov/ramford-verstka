@@ -48,9 +48,10 @@
         box-shadow: 0 3px 8px rgba(0,0,0,0.16);
         border-radius: 15px;
         color: rgba(28,28,28,100);
-        transition: .2s;
         padding: 25px 15px 25px 20px;
         z-index: 3;
+        @include transition;
+        transform: scale(1);
         #user-city2{
             font-weight: bold;
             margin: 0px 0 0 8px;
@@ -68,7 +69,7 @@
         }
     }
     .active{
-        display: none;
+        transform: scale(0, 1);
     }
 }
 .re-question::before{

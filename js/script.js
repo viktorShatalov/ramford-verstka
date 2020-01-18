@@ -168,10 +168,22 @@ function closeModal(modal) {
 }
 
 // footer sub-menu
+if ($(window).width() > 768) {
+  // Тут код для больших разрешений,
+  // к примеру, с шириной окна с сайтом больше 768 писелей
+} else {
+  // Тут код для маленьких экранов
+  $(".re-menu-column ul li").hide();
+  $(".re-menu-column h3").click(
+    function () {
+      $(".re-menu-column ul li").toggle('slow')
+    }
+  );
+}
 
-$(".re-menu-column ul li").hide();
-$(".re-menu-column h3").click(
+// card ptoduct description
+$(".re-description-btn a").click(
   function () {
-    $(".re-menu-column ul li").toggle('slow')
+    $(".re-specifications__block").toggle('active')
   }
 );

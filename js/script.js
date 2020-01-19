@@ -168,9 +168,10 @@ function closeModal(modal) {
 }
 
 // footer sub-menu
+
 if ($(window).width() > 768) {
   // Тут код для больших разрешений,
-  // к примеру, с шириной окна с сайтом больше 768 писелей
+  //с шириной окна с сайтом больше 768 писелей
 } else {
   // Тут код для маленьких экранов
   $(".re-menu-column ul li").hide();
@@ -181,9 +182,40 @@ if ($(window).width() > 768) {
   );
 }
 
-// card ptoduct description
-$(".re-description-btn a").click(
-  function () {
-    $(".re-specifications__block").toggle('active')
-  }
-);
+// card ptoduct description TABS
+
+$('.re-btn').click(function () {
+  var id = $(this).attr('data-tab'),
+    content = $('.re-specifications__block[data-tab="' + id + '"]');
+
+  $('.re-btn.active').removeClass('active');
+  $(this).addClass('active');
+
+  $('.re-specifications__block.active').removeClass('active');
+  content.addClass('active');
+});
+
+// сортировка по уене на странице category
+
+
+$('#re-category__sortBy').ready(function () {
+  $("#re-down-price").hide();
+
+  $('#re-img-sort').on('click',function () {
+    $("#re-down-price").toggle('slow'); 
+  });
+});
+
+// categoryPage filtr
+
+$('.re-sidebar-filtr').ready(function () {
+  $(".re-filtr-item__sub").hide();
+
+  $('.re-sidebar-filtr a').on('click', function (e) {
+    e.preventDefault();
+  });
+
+  $('.re-filtr-item').click(function () {
+    $(this).children(".re-filtr-item__sub").stop(true, true).slideDown(700);
+  });
+});

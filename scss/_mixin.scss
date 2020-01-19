@@ -1,6 +1,4 @@
 @mixin dspFlex{
-    display:-webkit-box;
-    display:-ms-flexbox;
     display:flex;
     flex-wrap:wrap;
 } 

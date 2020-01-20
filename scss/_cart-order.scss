@@ -13,6 +13,7 @@
 .re-order-product__item{
     @include dspFlex;
     justify-content: space-between;
+    align-items: center;
 }
 .re-oreder-title{
     h2{

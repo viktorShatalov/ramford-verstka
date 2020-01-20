@@ -383,6 +383,59 @@
     .re-sortBy{
         text-align: center;
     }
+    // cart-order page
+    .re-cart-order__form-row{
+        flex-wrap: wrap;
+    }
+    .re-order-row{
+        padding: 20px 20px 30px;
+    }
+    .re-orderForm-btn p{
+        line-height: 16px;
+        text-align: left;
+        padding: 5px 25% 0 0;
+    }
+    #re-formInput{
+        margin-bottom: 20px;
+        input{
+            width: 95%;
+            max-width: 300px;
+            margin: 0 auto 15px;
+        }
+    } 
+    .re-orderformRadio{
+        @include dspFlex;
+        flex-direction: column;
+        justify-content: left;
+        margin-bottom: 20px;
+        label{
+            margin: 0 0 10px;
+        }
+    }
+    .re-cart-order__content,.re-cart-order__sidebar{
+        margin:0 auto 30px ;
+    }
+    .re-order-sidebar__title{
+        margin-bottom: 20px;
+        p{
+            text-align: center;
+        }
+    }
+    .re-cart-order__sidebar .re-social{
+        text-align: left;
+        margin-bottom: 20px;
+        max-width: 75%;
+        ul{
+            justify-content: center;
+        }
+    }
+    .re-order-sidebar__img{
+        text-align: center;
+        img{
+            position: inherit;
+            margin-bottom: -3px;
+        }
+    }
 }
 
 @media (max-width: 414px){

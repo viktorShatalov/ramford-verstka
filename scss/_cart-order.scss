@@ -10,6 +10,10 @@
         color: black;
     }
 }
+.re-order-product__item{
+    @include dspFlex;
+    justify-content: space-between;
+}
 .re-oreder-title{
     h2{
         margin: 0px 0px 35px;
@@ -17,6 +21,7 @@
 }
 .re-order-product{
     @include dspFlex;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
 }
@@ -126,6 +131,9 @@
     padding: 35px 25px 0;
     .re-social{
         margin-bottom: 55px;
+        p{
+            font-size: 1.125em;
+        }
     }
 }
 .re-order-sidebar__title{

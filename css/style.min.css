@@ -1108,11 +1108,11 @@ ul li {
   color: white;
 }
 
-.re-form-btn .re-social {
+.re-social {
   line-height: 20px;
 }
 
-.re-form-btn .re-social ul {
+.re-social ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1120,17 +1120,17 @@ ul li {
       flex-wrap: wrap;
 }
 
-.re-form-btn .re-social ul li {
+.re-social ul li {
   margin: 0 25px 0 15px;
   position: relative;
 }
 
-.re-form-btn .re-social ul li a {
+.re-social ul li a {
   color: #313131;
   font-size: 0.8em;
 }
 
-.re-form-btn .re-social ul li:before {
+.re-social ul li:before {
   width: 15px;
   height: 15px;
   position: absolute;
@@ -1138,15 +1138,15 @@ ul li {
   top: 2px;
 }
 
-.re-form-btn .re-social ul li:nth-child(1)::before {
+.re-social ul li:nth-child(1)::before {
   content: url(../img/whatsapp-icon.png);
 }
 
-.re-form-btn .re-social ul li:nth-child(2)::before {
+.re-social ul li:nth-child(2)::before {
   content: url(../img/viber-icon.png);
 }
 
-.re-form-btn .re-social ul li:nth-child(3)::before {
+.re-social ul li:nth-child(3)::before {
   content: url(../img/telegram-icon.png);
 }
 
@@ -1757,6 +1757,201 @@ ul li {
   line-height: 25px;
 }
 
+.re-order-row {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 30px 0;
+  padding: 25px 75px 25px 40px;
+}
+
+.re-order-row p {
+  color: #7e7e7e;
+}
+
+.re-order-row strong {
+  color: black;
+}
+
+.re-oreder-title h2 {
+  margin: 0px 0px 35px;
+}
+
+.re-order-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.re-order-product__img img {
+  width: 100%;
+  max-width: 60px;
+  height: 60px;
+}
+
+.re-order-product__name {
+  width: 100%;
+  max-width: 340px;
+}
+
+.re-order-product__amount input {
+  width: 100px;
+}
+
+.re-order-product__price {
+  font-size: 1.25em;
+}
+
+.re-order-product__del button {
+  border: none;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  width: 62px;
+  height: 50px;
+  padding: 0;
+}
+
+.re-order-product__orderSum {
+  margin-top: -20px;
+}
+
+.re-order-product__orderSum p {
+  font-size: 2.125em;
+  margin-top: 5px;
+}
+
+.re-cart-order__form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.re-cart-order__content {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 35px 41px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 75%;
+          flex: 1 1 75%;
+  margin-right: 25px;
+}
+
+#re-orderForm legend {
+  margin: 0 0 30px;
+  font-size: 1.25em;
+}
+
+#re-formInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#re-formInput input {
+  width: 222px;
+  padding: 11px 0 11px 11px;
+  border-radius: 5px;
+  border: 1px solid #989898;
+}
+
+.re-orderformRadio {
+  margin-bottom: 35px;
+}
+
+.re-orderformRadio label {
+  color: #949494;
+  margin-right: 45px;
+  cursor: pointer;
+}
+
+.re-orderformRadio input {
+  margin-right: 10px;
+}
+
+.re-orderForm-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+.re-orderForm-btn p {
+  line-height: 52px;
+  color: #7e7e7e;
+}
+
+.re-orderForm-btn p a {
+  color: #006fff;
+}
+
+#orderForm-btn {
+  background-color: #ffa200;
+  color: white;
+  font-size: 1.125em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 17px 40px;
+}
+
+.re-cart-order__sidebar {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  padding: 35px 25px 0;
+}
+
+.re-cart-order__sidebar .re-social {
+  margin-bottom: 55px;
+}
+
+.re-order-sidebar__title {
+  margin-bottom: 65px;
+}
+
+.re-order-sidebar__title p {
+  font-size: 1.25em;
+  line-height: 26px;
+  margin: 5px 0;
+}
+
+.re-order-sidebar__img img {
+  width: 248px;
+  position: relative;
+  bottom: -29px;
+}
+
 .re-footer-mobile__location {
   display: none;
 }
@@ -2207,6 +2402,9 @@ footer {
   }
   .re-footer-map .re-footer-mobile__location {
     display: block;
+  }
+  .re-menu-column ul li {
+    display: none;
   }
   .re-content-form {
     width: 233px;

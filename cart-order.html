@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ramford</title>
+    <!-- стили -->
+    <link rel="icon" type="image/png" href="img/icon-kamin.png">
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="js/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- скрипт определения города -->
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
+        type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            $("#user-city,#user-city2").text(ymaps.geolocation.city);
+            $('.re-unswer a').click(function () {
+                $('.re-question').toggleClass('active');
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <!-- arthboard modal -->
+    <div class="re-modal__arthboard" id="re-modal__arthboard">
+        <button data-close-button class="close-button">&times;</button>
+        <div class="re-modal-header">
+            <div class="re-modal-title">
+                <h2>
+                    Уже уходите?
+                </h2>
+                <p>
+                    Поможем подобрать правильный камин. <br> Всего 10 минут и Вы узнаете какой камин подойдет именно
+                    Вам!
+                </p>
+            </div>
+        </div>
+        <div class="re-modal-body">
+            <form action="post" class="re-modal-form__arthboard">
+                <div class="re-form-input__modal">
+                    <input type="tel" placeholder="Телефон">
+                    <div class="social">
+                        <label><input type="radio" checked name="social">По телефону</label>
+                        <label><input type="radio" name="social">В whats'ap, VIber и т.д.</label>
+                    </div>
+                    <input data-close-button type="button" value="Отправить">
+                </div>
+                <div class="form-modal-description">
+                    <p>
+                        Нажимая кнопку, Вы соглашаетесь c условиями
+                        <a href="#"> политики конфиденциальности.</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="re-overlay"></div>
+
+    <!-- modal -->
+    <div class="re-modal" id="re-modal">
+        <div class="re-modal-header">
+            <button data-close-button class="close-button">&times;</button>
+            <div class="re-modal-title">
+                <h2>
+                    Перезвоним в течение 15 минут!
+                </h2>
+            </div>
+        </div>
+        <div class="re-modal-body">
+            <form action="post" class="re-modal-form">
+                <div class="re-form-input__modal">
+                    <input type="text" placeholder="Имя">
+                    <input type="tel" placeholder="Телефон">
+                    <input data-close-button type="button" value="Отправить">
+                </div>
+                <div class="form-modal-description">
+                    <p>
+                        Нажимая кнопку, Вы соглашаетесь c условиями
+                        <a href="#"> политики конфиденциальности.</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="re-overlay"></div>
+
+    <!-- header -->
+    <header class="re-header">
+        <div class="re-header-row">
+            <div class="re-header-row__top">
+                <div class="re-conteiner">
+                    <div class="re-top-left">
+                        <div class="re-payment">
+                            <a href="#">
+                                <p>Доставка и оплата</p>
+                            </a>
+                        </div>
+                        <div class="re-credit">
+                            <a href="#">
+                                <p>Рассрочка и кредит</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="re-top-right">
+                        <div class="re-location">
+                            <p id="user-city"></p>
+                            <p class="re-question">
+                                Ваш город
+                                <span id="user-city2"></span>
+                                ?
+                                <span class="re-unswer">
+                                    <a href="#">Да</a>
+                                    <a href="#">Нет</a>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="re-phone">
+                            <a href="tel:8 800 505-61-36">
+                                <p>8 800 505-61-36</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="re-header-row__down">
+                <div class="re-conteiner">
+                    <div class="re-logo">
+                        <a href="#">
+                            <img src="img/logo-header.png" alt="ramford-logo">
+                        </a>
+                    </div>
+                    <nav class="re-header-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#">Каталог</a>
+                            </li>
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                    <nav class="re-mobile-menu">
+                        <ul>
+                            <a href="#">
+                                <li>
+                                    <div class="re-location__mobile">
+                                        <p id="user-city"></p>
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="tel:8 800 505-61-36">
+                                <li>
+                                    <div class="re-phone__mobile">
+                                        <p>8 800 505-61-36</p>
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li>Главная</li>
+                            </a>
+                            <a href="#">
+                                <li>Каталог</li>
+                            </a>
+                            <a href="#">
+                                <li>О нас </li>
+                            </a>
+                            <a href="#">
+                                <li>Контакты</li>
+                            </a>
+                            <div class="re-request-call__mobile">
+                                <a href="#" data-modal-target="#re-modal" class="anim_btn effekt">Заказать звонок</a>
+                            </div>
+                        </ul>
+                    </nav>
+                    <div class="re-request-call">
+                        <a href="#" data-modal-target="#re-modal" class="anim_btn effekt">Заказать звонок</a>
+                    </div>
+                    <div class="re-cart">
+                        <a href="#">
+                            <img src="img/shopping-cart.png" alt="ramford-cart">
+                        </a>
+                        <p><span>0</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <main class="re-main">
+        <!-- section cart-order -->
+        <section id="re-order">
+            <div class="re-conteiner">
+                <div class="re-breadcumbs">
+                    <ul>
+                        <li>
+                            <a href="#">Ramford</a>
+                        </li>
+                        <li>
+                            <a href="">&gt;</a>
+                        </li>
+                        <li>
+                            <a href="#">Доставка и оплата</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="re-order-row">
+                    <div class="re-oreder-title">
+                        <h2>
+                            Оформление заказа
+                        </h2>
+                    </div>
+                    <div class="re-order-product">
+                        <div class="re-order-product__img">
+                            <img src="img/Dublin_arochnyy_skal_nyy_s_Cavendish.png" alt="img">
+                        </div>
+                        <div class="re-order-product__name">
+                            <p>Dimplex Портал Pierre Luxe (шампань) с очагом Opti-Myst Cavendish</p>
+                        </div>
+                        <div class="re-order-product__amount">
+                            <input id="count-order" type="text" value="1">
+                        </div>
+                        <div class="re-order-product__price">
+                            <p><span><strong>129 590</strong></span> ₽</p>
+                        </div>
+                        <div class="re-order-product__del">
+                            <button><img src="img/cart-icon.png"></button>
+                        </div>
+                        <div class="re-order-product__orderSum">
+                            <span><small>Итого:</small></span>
+                            <p><span><strong>129 590</strong></span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section cart-order__form -->
+        <section id="re-cart-order__form">
+            <div class="re-conteiner">
+                <div class="re-cart-order__form-row">
+                    <div class="re-cart-order__content">
+                        <form action="get" id="re-orderForm">
+                            <legend>Контактная информация</legend>
+                            <div class="" id="re-formInput">
+                                <input type="text" placeholder="Имя">
+                                <input type="number" placeholder="Телефон*">
+                                <input type="email" placeholder="Email">
+                            </div>
+                            <legend>Адрес доставки</legend>
+                            <div class="" id="re-formInput">
+                                <input type="text" placeholder="Город">
+                                <input type="text" placeholder="Адрес">
+                                <input type="text" placeholder="Индекс">
+                            </div>
+                            <legend>Способ доставки</legend>
+                            <div class="re-orderformRadio">
+                                <label><input type="radio" name="re-check">Самовывоз</label>
+                                <label><input type="radio" name="re-check">Курьером до двери</label>
+                            </div>
+                            <legend> Способ оплаты</legend>
+                            <div class="re-orderformRadio">
+                                <label><input type="radio" name="re-check">Наличными при получении</label>
+                                <label><input type="radio" name="re-check">Безналичный рассчет</label>
+                                <label><input type="radio" name="re-check">Оплата картой оналайн</label>
+                            </div>
+                            <div class="re-orderForm-btn">
+                                <input id="orderForm-btn" type="submit" value="Отправить заказ">
+                                <p><small>Нажимая кнопку, Вы соглашаетесь c условиями <a href="#"> политики
+                                            конфиденциальности.</a></small></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="re-cart-order__sidebar">
+                        <div class="re-order-sidebar__title">
+                            <p>
+                                Есть вопросы?
+                            </p>
+                            <p>
+                                <strong>
+                                    8 800 505-61-36
+                                </strong>
+                            </p>
+                            <p>
+                                <strong>
+                                    info@ramford.ru
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="re-social">
+                            <p>Мы онлайн в месенджерах:</p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Whats'ap
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Viber
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Telegram
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="re-order-sidebar__img">
+                            <img src="img/mobile.png" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="re-footer">
+        <div class="re-footer-row">
+            <div class="re-conteiner">
+                <div class="re-footer-row__top">
+                    <div class="re-footer-logo">
+                        <img src="./img/logo-header.png" alt="footer-logo">
+                    </div>
+                    <div class="re-top-right">
+                        <div class="re-location">
+                            <a href="#">
+                                <p id="user-city"></p>
+                            </a>
+                        </div>
+                        <div class="re-phone">
+                            <a href="tel:8 800 505-61-36">
+                                <p>8 800 505-61-36</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="re-footer-row__center">
+                    <div class="re-footer-menu">
+                        <nav class="re-menu-column">
+                            <h3>Каталог</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">Электрокамины</a>
+                                </li>
+                                <li>
+                                    <a href="#">Камины</a>
+                                </li>
+                                <li>
+                                    <a href="#">Порталы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Электроочаги</a>
+                                </li>
+                                <li>
+                                    <a href="#">Печи для дома</a>
+                                </li>
+                                <li>
+                                    <a href="#">Печи для бань</a>
+                                </li>
+                                <li>
+                                    <a href="#">Аксессуары</a>
+                                </li>
+                                <li>
+                                    <a href="#">Монтаж</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="re-menu-column">
+                            <h3>Меню</h3>
+                            <ul>
+                                <li>
+                                    <a href="#"> Главная</a>
+                                </li>
+                                <li>
+                                    <a href="#">Каталог</a>
+                                </li>
+                                <li>
+                                    <a href="#">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="re-menu-column">
+                            <h3>Покупателям</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">Доставка и оплата</a>
+                                </li>
+                                <li>
+                                    <a href="#">Рассрочка и кредит</a>
+                                </li>
+                                <li>
+                                    <a href="#">Гарантии</a>
+                                </li>
+                                <li>
+                                    <a href="#">Возврат</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="re-footer-map">
+                            <div class="re-footer-mobile__location">
+                                <div class="re-top-right">
+                                    <div class="re-location">
+                                        <a href="#">
+                                            <p id="user-city"></p>
+                                        </a>
+                                    </div>
+                                    <div class="re-phone">
+                                        <a href="tel:8 800 505-61-36">
+                                            <p>8 800 505-61-36</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="re-adress">20050, Екатеринбург, ул. Расточная, 15/4-17 (с 9:00 - 21:00 МСК)</p>
+                            <div class="re-google-map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2180.1872172822946!2d60.50571731544358!3d56.877032912191936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c171d2669ab0a9%3A0x4a61dba8dc1b026f!2z0YPQuy4g0KDQsNGB0YLQvtGH0L3QsNGPLCAxNS80LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDA1MA!5e0!3m2!1sru!2sua!4v1579179829322!5m2!1sru!2sua"
+                                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="re-footer-row__down">
+                    <div class="re-footer-signature">
+                        <p>2014-2019 Компания РАМФОРД</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

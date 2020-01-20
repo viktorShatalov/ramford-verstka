@@ -1,0 +1,145 @@
+// ection cart-order
+.re-order-row{
+    @include background;
+    margin: 30px 0;
+    padding: 25px 75px 25px 40px;
+    p{
+        color: $color_signature;
+    }
+    strong{
+        color: black;
+    }
+}
+.re-oreder-title{
+    h2{
+        margin: 0px 0px 35px;
+    }
+}
+.re-order-product{
+    @include dspFlex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.re-order-product__img{
+    img{
+        width: 100%;
+    max-width: 60px;
+    height: 60px;
+    }
+}
+.re-order-product__name{
+    width: 100%;
+    max-width: 340px;
+}
+.re-order-product__amount{
+    input{
+        width: 100px;
+    }
+}
+.re-order-product__price{
+    font-size: 1.25em;
+}
+.re-order-product__del{
+    button{
+        border: none;
+        outline: none;
+        background-color: $color_white;
+        cursor: pointer;
+        width: 62px;
+        height: 50px;
+        padding: 0;
+    }
+}
+.re-order-product__orderSum{
+    margin-top: -20px;
+    p{
+        font-size: 2.125em;
+        margin-top: 5px;
+    }
+}
+// section cart-order__form
+.re-cart-order__form-row{
+    @include dspFlex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.re-cart-order__content{
+    @include background;
+    padding: 35px 41px;
+    flex: 1 1 75%;
+    margin-right: 25px;
+}
+#re-orderForm{
+    legend{
+        margin: 0 0 30px;
+        font-size: 1.25em;
+    }
+}
+#re-formInput{
+    @include dspFlex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    input{
+        width: 222px;
+        padding: 11px 0 11px 11px;
+        border-radius: 5px;
+        border: 1px solid $color_burger-menu;
+    }
+}
+.re-orderformRadio{
+    margin-bottom: 35px;
+    label{
+        color: $color_signature + rgba(22,22,22,100%);
+        margin-right: 45px;
+        cursor: pointer;
+    }
+    input{
+        margin-right: 10px;
+    }
+}
+.re-orderForm-btn{
+    @include dspFlex;
+    text-align: center;
+    p{
+        line-height: 52px;
+        color: $color_signature;
+        a{
+            color: $color_link;
+        }
+    }
+}
+#orderForm-btn{
+    background-color: $color_yellow;
+    color: $color_white;
+    font-size: 1.125em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 17px 40px;
+}
+
+.re-cart-order__sidebar{
+    @include background;
+    flex: 1 1 20%;
+    padding: 35px 25px 0;
+    .re-social{
+        margin-bottom: 55px;
+    }
+}
+.re-order-sidebar__title{
+    margin-bottom: 65px;
+    p{
+        font-size: 1.25em;
+        line-height: 26px;
+        margin: 5px 0;
+    }
+}
+.re-order-sidebar__img{
+    img{
+        width: 248px;
+        position: relative;
+        bottom: -29px;
+    }
+}

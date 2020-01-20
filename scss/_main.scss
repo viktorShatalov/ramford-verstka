@@ -559,34 +559,34 @@
     button:hover{
         @include button_hover;
     }
-    .re-social{
-        line-height: 20px;
-        ul{
-            @include dspFlex;
-            li{
-                margin: 0 25px 0 15px;
-                position: relative;
-                a{
-                    color: $color_form-after;
-                    font-size: 0.8em;
-                }
+}
+.re-social{
+    line-height: 20px;
+    ul{
+        @include dspFlex;
+        li{
+            margin: 0 25px 0 15px;
+            position: relative;
+            a{
+                color: $color_form-after;
+                font-size: 0.8em;
             }
-            li:before{
-                width: 15px;
-                height: 15px;
-                position: absolute;
-                left: -18px;
-                top: 2px;
-            }
-            li:nth-child(1)::before{
-                content: url(../img/whatsapp-icon.png);
-            }
-            li:nth-child(2)::before{
-                content: url(../img/viber-icon.png);
-            }
-            li:nth-child(3)::before{
-                content: url(../img/telegram-icon.png);
-            }
+        }
+        li:before{
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            left: -18px;
+            top: 2px;
+        }
+        li:nth-child(1)::before{
+            content: url(../img/whatsapp-icon.png);
+        }
+        li:nth-child(2)::before{
+            content: url(../img/viber-icon.png);
+        }
+        li:nth-child(3)::before{
+            content: url(../img/telegram-icon.png);
         }
     }
 }

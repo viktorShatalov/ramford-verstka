@@ -285,7 +285,8 @@
                                 <label><input type="radio" name="re-check2">Оплата картой оналайн</label>
                             </div>
                             <div class="re-orderForm-btn">
-                                <input id="orderForm-btn" type="submit" value="Отправить заказ">
+                                <input id="orderForm-btn" onclick="myfncRequest()" type="submit"
+                                    value="Отправить заказ">
                                 <p><small>Нажимая кнопку, Вы соглашаетесь c условиями <a href="#"> политики
                                             конфиденциальности.</a></small></p>
                             </div>
@@ -484,13 +485,49 @@
             }
         }
 
-        // при нажатии на кнопку del
 
-        del.onclick = () => {
-            if (del.tagName == 'DIV') {
-                div.style.display = 'none';
-            }
-        }</script>
+        // собираю товары в json
+        const nameItem = document.querySelector('.re-order-product__name p');
+        const countItem = document.querySelector('#product-input');
+        const priceItem = document.querySelector('#product-price');
+
+        const order = {
+            'name of product': nameItem.innerHTML,
+            'count of product': countItem.value,
+            'price of product': priceItem.innerHTML,
+        }
+
+        console.log(order)
+
+        // const xhttp = new XMLHttpRequest();
+
+        // xhttp.onreadystatechange = function () {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         myfncRequest(this.responseText)
+        //     }
+        // }
+
+        // xhttp.open("POST", "http://ramford.ru/netcat/plusOne.php", true);
+
+        // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        // xhttp.send();
+
+        function myfncRequest(data) {
+            console.log(data.order)
+            order = data
+        }
+        var myfncRequests = function () {
+            $.ajax({
+                url: 'http://ramford.ru/netcat/plusOne.php',
+                data: 'data',
+                method: 'POST',
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                }
+            });
+
+    </script>
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
     <script src="js/script.js"></script>

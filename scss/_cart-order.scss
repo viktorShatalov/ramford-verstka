@@ -15,6 +15,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    flex-wrap: nowrap;
 }
 .re-oreder-title{
     h2{
@@ -26,6 +27,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
+    flex-wrap: nowrap;
 }
 .re-order-product__img{
     margin-right: 50px;
@@ -42,10 +44,27 @@
         font-size: 1.25em;
     }
 }
-.re-order-product__amount{
+.re-order-product__count{
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 6px 11px;
     input{
-        width: 100px;
+        width: 20px;
+        font-size: 1.125em;
+        height: 20px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: $color_white;
+        color: $color_burger-menu;
     }
+    &:hover{
+        color: $color_signature;
+    }
+}
+#product-input{
+    padding: 0 0 0 9px;
+    color: rgba(0,0,0,1);
 }
 .re-order-product__price{
     font-size: 1.25em;

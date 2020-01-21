@@ -775,7 +775,7 @@ ul li {
   font-size: .8em;
 }
 
-.re-form-input__modal input[type="button"] {
+.re-form-input__modal input[type="submit"] {
   color: white;
   border: none;
   background-color: #ffa200;
@@ -1787,6 +1787,8 @@ ul li {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .re-oreder-title h2 {
@@ -1806,6 +1808,8 @@ ul li {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 50px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .re-order-product__img {
@@ -1827,8 +1831,30 @@ ul li {
   font-size: 1.25em;
 }
 
-.re-order-product__amount input {
-  width: 100px;
+.re-order-product__count {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 6px 11px;
+}
+
+.re-order-product__count input {
+  width: 20px;
+  font-size: 1.125em;
+  height: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  color: #989898;
+}
+
+.re-order-product__count:hover {
+  color: #7e7e7e;
+}
+
+#product-input {
+  padding: 0 0 0 9px;
+  color: black;
 }
 
 .re-order-product__price {

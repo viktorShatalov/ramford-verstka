@@ -48,7 +48,7 @@
                         <label><input type="radio" checked name="social">По телефону</label>
                         <label><input type="radio" name="social">В whats'ap, VIber и т.д.</label>
                     </div>
-                    <input data-close-button type="button" value="Отправить">
+                    <input data-close-button type="submit" value="Отправить">
                 </div>
                 <div class="form-modal-description">
                     <p>
@@ -76,7 +76,7 @@
                 <div class="re-form-input__modal">
                     <input type="text" placeholder="Имя">
                     <input type="tel" placeholder="Телефон">
-                    <input data-close-button type="button" value="Отправить">
+                    <input data-close-button type="submit" value="Отправить">
                 </div>
                 <div class="form-modal-description">
                     <p>
@@ -234,19 +234,21 @@
                             </div>
                         </div>
                         <div class="re-order-product__item">
-                            <div class="re-order-product__amount">
-                                <input id="count-order" type="text" value="1">
+                            <div class="re-order-product__count">
+                                <input type="submit" id="btnMinus" value="-"></input>
+                                <input type="text" id="product-input" value="1"></input>
+                                <input type="submit" id="btnPlus" value="+"></input>
                             </div>
                             <div class="re-order-product__price">
-                                <p><span><strong>129 590</strong></span> ₽</p>
+                                <p><span><strong id="product-price">129 590</strong></span> ₽</p>
                             </div>
                             <div class="re-order-product__del">
-                                <button><img src="img/cart-icon.png"></button>
+                                <button id="del"><img src="img/cart-icon.png"></button>
                             </div>
                         </div>
                         <div class="re-order-product__orderSum">
                             <span><small>Итого:</small></span>
-                            <p><span><strong>129 590</strong></span> ₽</p>
+                            <p><span><strong id="product-Sum"></strong></span> ₽</p>
                         </div>
                     </div>
                 </div>
@@ -453,7 +455,42 @@
             </div>
         </div>
     </footer>
+    <script>
+        // счетчик количества товара cart-page
 
+        const min = document.querySelector('#btnMinus');
+        const inp = document.querySelector('#product-input');
+        const max = document.querySelector('#btnPlus');
+        const price = document.querySelector('#product-price');
+        const amn = document.querySelector('#product-Sum');
+
+        // записываю данные цены в итоговую стоимость
+        amn.innerHTML = price.innerHTML;
+
+        // при нажатии на кнопку +
+
+        max.onclick = () => {
+            if (inp.value++) {
+                min.disabled = false;
+            }
+        }
+
+        // при нажатии на кнопку -
+        min.onclick = () => {
+            if (inp.value--) {
+            }
+            if (inp.value == 1) {
+                min.disabled = true;
+            }
+        }
+
+        // при нажатии на кнопку del
+
+        del.onclick = () => {
+            if (del.tagName == 'DIV') {
+                div.style.display = 'none';
+            }
+        }</script>
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
     <script src="js/script.js"></script>

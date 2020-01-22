@@ -15,7 +15,8 @@
                 li{
                     border: 1px solid $color_box-shadow;
                     border-radius: 5px;
-                    padding: 5px;;
+                    padding: 5px;
+                    margin: 0 5px;
                     a img{
                         width: 55px;
                         height: 55px;
@@ -74,7 +75,9 @@
 }
 .re-card-product__btn{
     margin-bottom: 45px;
-    button{
+    @include dspFlex;
+    justify-content: space-between;
+    a{
         width: 206px;
         background-color: $color_white;
         border: 1px solid rgba(177,177,177,100%);
@@ -85,8 +88,11 @@
         @include transition;
         cursor: pointer;
         font-size: 1.125em;
+        text-align: center;
+        display: block;
+        color: $color_text_menu;
     }
-    button:hover{
+    a.active{
         background-color: $color_yellow;
         color: $color_white;
     }
@@ -96,6 +102,9 @@
         color: $color_burger-menu;
         margin-right: 25px;
         font-size: 1.125em;
+    }
+    a:hover{
+        color: $color_vanilla;
     }
 }
 .re-description-btn{

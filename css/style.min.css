@@ -1337,25 +1337,26 @@ ul li {
   font-size: 1.125em;
 }
 
-.re-filtr-item__sub .re-subMenu {
-  cursor: pointer;
-}
-
-.re-filtr-item__sub .re-subMenu input {
-  margin: 10px 0;
-}
-
 .re-sidebar-filtr a {
   color: #3d3d3d;
   font-size: 1.125em;
-  position: absolute;
-  top: 10px;
-  left: 20%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.re-sidebar-filtr li a:hover {
+  color: #dd6031;
 }
 
 .re-sidebar-filtr .re-filtr-items .re-filtr-item {
   position: relative;
   margin: 0 0 10%;
+}
+
+.re-sidebar-filtr .re-filtr-items .re-filtr-item a {
+  cursor: pointer;
+  position: relative;
+  top: -10px;
 }
 
 .re-sidebar-filtr .re-filtr-items .re-filtr-item::before {
@@ -1400,6 +1401,18 @@ ul li {
   position: absolute;
   right: 0;
   top: 5%;
+}
+
+.re-filtr-item__sub {
+  margin: 15px 0 0 7%;
+}
+
+.re-filtr-item__sub li {
+  margin: 0 0 10px;
+}
+
+.re-filtr-item__sub li .re-subMenu {
+  top: 0;
 }
 
 .re-category-content {
@@ -1455,8 +1468,8 @@ ul li {
 }
 
 .re-categoty-product__item {
-  margin: 0 0 3%;
-  padding: 2% 3% 0;
+  margin: 0 0 10%;
+  padding: 5%;
   background-color: white;
   border-radius: 10px;
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -1468,7 +1481,8 @@ ul li {
 }
 
 .re-categoty-product__item .re-item-img img {
-  width: 207px;
+  width: 100%;
+  height: 100%;
 }
 
 .re-categoty-product__item .re-item-description {
@@ -1509,6 +1523,7 @@ ul li {
 .re-categoty-product__item .re-item-action .re-item-price p span {
   font-weight: bold;
   color: #3d3d3d;
+  font-size: 1.5em;
 }
 
 .re-categoty-product__item .re-item-action .re-item-action__btn {
@@ -1560,6 +1575,7 @@ ul li {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 5px;
+  margin: 0 5px;
 }
 
 .re-card-product-row__top .re-re-card-product__left .re-card-product-img ul li a img {
@@ -1627,9 +1643,17 @@ ul li {
 
 .re-card-product__btn {
   margin-bottom: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.re-card-product__btn button {
+.re-card-product__btn a {
   width: 206px;
   background-color: white;
   border: 1px solid #b1b1b1;
@@ -1641,9 +1665,12 @@ ul li {
   transition: all 0.3s ease;
   cursor: pointer;
   font-size: 1.125em;
+  text-align: center;
+  display: block;
+  color: #3d3d3d;
 }
 
-.re-card-product__btn button:hover {
+.re-card-product__btn a.active {
   background-color: #ffa200;
   color: white;
 }
@@ -1652,6 +1679,10 @@ ul li {
   color: #989898;
   margin-right: 25px;
   font-size: 1.125em;
+}
+
+.re-card-product__link a:hover {
+  color: #dd6031;
 }
 
 .re-description-btn {
@@ -2139,7 +2170,7 @@ footer {
     overflow: hidden;
   }
   .re-header {
-    top: 0;
+    top: -2px;
   }
   .re-header-row__top,
   .re-header-menu,
@@ -2164,7 +2195,7 @@ footer {
     width: 142px;
   }
   .re-cart {
-    left: -20%;
+    left: -100%;
     top: -10px;
   }
   .re-form-input__modal input {
@@ -2248,7 +2279,7 @@ footer {
     width: 30px;
     height: 20px;
     top: 25px;
-    left: 15%;
+    left: 25%;
     z-index: 1;
   }
   .burger span {
@@ -2388,6 +2419,7 @@ footer {
   .re-form-btn a.anim_btn:link, .re-form-btn a.anim_btn:visited {
     margin: 0 auto 20px;
     max-width: 199px;
+    text-align: center;
   }
   .re-formApplication-right {
     margin: 0 auto -4px;
@@ -2468,6 +2500,24 @@ footer {
   }
   .re-social p {
     margin-bottom: 10px;
+  }
+  .re-card-product-row__top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .re-card-product__btn a {
+    width: 300px;
+    margin: 0 auto 20px;
+  }
+  .re-card-product__link {
+    text-align: center;
+  }
+  .re-card-product__link a {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  .re-description-btn a {
+    margin: 0 auto 33px;
   }
   .re-breadcumbs {
     margin: 80px 10px 10px;
@@ -2550,6 +2600,9 @@ footer {
   }
   .re-orderformRadio label {
     margin: 0 0 10px;
+  }
+  #orderForm-btn {
+    width: 300px;
   }
   .re-cart-order__content, .re-cart-order__sidebar {
     margin: 0 auto 30px;

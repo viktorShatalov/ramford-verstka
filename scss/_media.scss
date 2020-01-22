@@ -7,7 +7,7 @@
         overflow: hidden;
     }
     .re-header{
-        top: 0;
+        top: -2px;
     }
     .re-header-row__top,
     .re-header-menu,
@@ -35,7 +35,7 @@
         }
     }
     .re-cart{
-        left: -20%;
+        left: -100%;
         top: -10px;
     }
     .re-form-input__modal input{
@@ -120,7 +120,7 @@
         width: 30px;
         height: 20px;
         top: 25px;
-        left: 15%;
+        left: 25%;
         z-index: 1;
     }
     .burger span{
@@ -271,6 +271,7 @@
     .re-form-btn a.anim_btn:link, .re-form-btn a.anim_btn:visited{
         margin: 0 auto 20px;
         max-width: 199px;
+        text-align: center;
     }
     .re-formApplication-right{
         margin: 0 auto -4px;
@@ -355,6 +356,25 @@
             margin-bottom: 10px;
         }
     }
+    // card-product page
+    .re-card-product-row__top{
+        flex-wrap: wrap;
+    }
+    .re-card-product__btn a{
+        width: 300px;
+        margin: 0 auto 20px;
+    }
+    .re-card-product__link{
+        text-align: center;
+        a{
+            display: block;
+            margin: 0 auto 10px;
+        }
+    }
+    .re-description-btn a{
+        margin: 0 auto 33px;
+    }
+
     // deliveryPage
     .re-breadcumbs{
         margin: 80px 10px 10px;
@@ -426,6 +446,9 @@
         label{
             margin: 0 0 10px;
         }
+    }
+    #orderForm-btn{
+        width: 300px;
     }
     .re-cart-order__content,.re-cart-order__sidebar{
         margin:0 auto 30px ;

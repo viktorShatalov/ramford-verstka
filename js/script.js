@@ -179,6 +179,7 @@ if ($(window).width() > 768) {
 } else {
   // Тут код для маленьких экранов
   $(".re-menu-column ul li").hide();
+  
   $(".re-menu-column h3").click(
     function () {
       $(".re-menu-column ul li").toggle('slow')
@@ -214,12 +215,8 @@ $('#re-category__sortBy').ready(function () {
 $('.re-sidebar-filtr').ready(function () {
   $(".re-filtr-item__sub").hide();
 
-  $('.re-sidebar-filtr a').on('click', function (e) {
-    e.preventDefault();
-  });
-
   $('.re-filtr-item').click(function () {
-    $(this).children(".re-filtr-item__sub").stop(true, true).slideDown(700);
+    $(this).children(".re-filtr-item__sub").stop(true, true).toggle('slow');
   });
 });
 

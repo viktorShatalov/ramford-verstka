@@ -2505,6 +2505,8 @@ footer {
   }
   .re-order-product {
     margin-bottom: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .re-order-product__img {
     margin-right: 20px;

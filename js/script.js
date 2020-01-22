@@ -87,11 +87,11 @@ $(document).ready(function () {
 
 // timer
 // function getTimeRemaining(endtime) {
-//   var t = Date.parse(endtime) - Date.parse(new Date());
-//   var seconds = Math.floor((t / 1000) % 60);
-//   var minutes = Math.floor((t / 1000 / 60) % 60);
-//   var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-//   var days = Math.floor(t / (1000 * 60 * 60 * 24));
+//   let t = Date.parse(endtime) - Date.parse(new Date());
+//   let seconds = Math.floor((t / 1000) % 60);
+//   let minutes = Math.floor((t / 1000 / 60) % 60);
+//   let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+//   let days = Math.floor(t / (1000 * 60 * 60 * 24));
 //   return {
 //     'total': t,
 //     'days': days,
@@ -102,14 +102,14 @@ $(document).ready(function () {
 // }
 
 // function initializeClock(id, endtime) {
-//   var clock = document.getElementById(id);
-//   var daysSpan = clock.querySelector('.days');
-//   var hoursSpan = clock.querySelector('.hours');
-//   var minutesSpan = clock.querySelector('.minutes');
-//   var secondsSpan = clock.querySelector('.seconds');
+//   let clock = document.getElementById(id);
+//   let daysSpan = clock.querySelector('.days');
+//   let hoursSpan = clock.querySelector('.hours');
+//   let minutesSpan = clock.querySelector('.minutes');
+//   let secondsSpan = clock.querySelector('.seconds');
 
 //   function updateClock() {
-//     var t = getTimeRemaining(endtime);
+//     let t = getTimeRemaining(endtime);
 
 //     daysSpan.innerHTML = ('0' + t.days);
 //     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
@@ -123,49 +123,53 @@ $(document).ready(function () {
 //   }
 
 //   updateClock();
-//   var timeinterval = setInterval(updateClock, 1000);
+//   let timeinterval = setInterval(updateClock, 1000);
 // }
 
-// var deadline = new Date(Date.parse(new Date()) + 3 * 24 * 60 * 60 * 1000); // for endless timer
+// let deadline = new Date(Date.parse(new Date()) + 3 * 24 * 60 * 60 * 1000); // for endless timer
 // initializeClock('countdown', deadline);
 
 // modal
-const openModalButtons = document.querySelectorAll('[data-modal-target]');
-const closeModalButtons = document.querySelectorAll('[data-close-button]');
-const overlay = document.getElementById('re-overlay');
+function modal() {
 
-openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
+  const openModalButtons = document.querySelectorAll('[data-modal-target]');
+  const closeModalButtons = document.querySelectorAll('[data-close-button]');
+  const overlay = document.getElementById('re-overlay');
+
+  openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = document.querySelector(button.dataset.modalTarget)
+      openModal(modal)
+    })
   })
-})
 
-overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.re-modal.active')
-  modals.forEach(modal => {
-    closeModal(modal)
+  overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.re-modal.active')
+    modals.forEach(modal => {
+      closeModal(modal)
+    })
   })
-})
 
-closeModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.re-modal')
-    closeModal(modal)
+  closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = button.closest('.re-modal')
+      closeModal(modal)
+    })
   })
-})
 
-function openModal(modal) {
-  if (modal == null) return
-  modal.classList.add('active')
-  overlay.classList.add('active')
+  function openModal(modal) {
+    if (modal == null) return
+    modal.classList.add('active')
+    overlay.classList.add('active')
+  }
+
+  function closeModal(modal) {
+    if (modal == null) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+  }
 }
-
-function closeModal(modal) {
-  if (modal == null) return
-  modal.classList.remove('active')
-  overlay.classList.remove('active')
-}
+modal();
 
 // footer sub-menu
 
@@ -197,7 +201,6 @@ $('.re-btn').click(function () {
 
 // сортировка по уене на странице category
 
-
 $('#re-category__sortBy').ready(function () {
   $("#re-down-price").hide();
 
@@ -220,3 +223,28 @@ $('.re-sidebar-filtr').ready(function () {
   });
 });
 
+// счетчик количества товара cart-page
+
+function addHandlers(count) {
+
+  let minus = count.querySelector("#btnMinus");
+  let number = count.querySelector("#product-input");
+  let plus = count.querySelector("#btnPlus");
+
+  plus.addEventListener("click", function () {
+    +number.value++;
+    if (number.value >= 1) {
+      minus.disabled = false;
+    }
+  });
+
+  minus.addEventListener("click", function () {
+    +number.value--;
+    if (number.value == 1) {
+      minus.disabled = true;
+    }
+  });
+}
+
+let counts = document.querySelectorAll(".re-order-product__count");
+counts.forEach(addHandlers);

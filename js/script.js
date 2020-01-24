@@ -1,6 +1,21 @@
+// определение города
+
+$(document).ready(function () {
+  window.onload = function () {
+    $("#user-city,#user-city2").text(ymaps.geolocation.city);
+
+    // убрал всплывашку
+    $('.re-question').hide();
+    // закрыть всплывашку рядом с городом
+    // $('.re-unswer a').click(function () {
+    //   $('.re-question').toggleClass('active');
+    // });
+  }
+})
+
 // slick-slider
 $('.re-info-slider').slick({
-  autoplay: true,
+  autoplay: false,
   infinite: true,
   arrows: false,
   dots: true,
@@ -85,51 +100,79 @@ $(document).ready(function () {
   })
 })
 
-// timer
-// function getTimeRemaining(endtime) {
-//   let t = Date.parse(endtime) - Date.parse(new Date());
-//   let seconds = Math.floor((t / 1000) % 60);
-//   let minutes = Math.floor((t / 1000 / 60) % 60);
-//   let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-//   let days = Math.floor(t / (1000 * 60 * 60 * 24));
-//   return {
-//     'total': t,
-//     'days': days,
-//     'hours': hours,
-//     'minutes': minutes,
-//     'seconds': seconds
-//   };
-// }
+// // timer
 
-// function initializeClock(id, endtime) {
-//   let clock = document.getElementById(id);
-//   let daysSpan = clock.querySelector('.days');
-//   let hoursSpan = clock.querySelector('.hours');
-//   let minutesSpan = clock.querySelector('.minutes');
-//   let secondsSpan = clock.querySelector('.seconds');
+// function timer() {
+//   // получаю время начала отсчета
+//   let deadline;
 
-//   function updateClock() {
-//     let t = getTimeRemaining(endtime);
-
-//     daysSpan.innerHTML = ('0' + t.days);
-//     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-//     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-//     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-//     if (t.total <= 0) {
-//       clearInterval(timeinterval);
+//   (function () {
+//     if (localStorage.getItem("time")) {
+//       deadline = new Date(Number(localStorage.getItem("time")));
+//     } else {
+//       deadline = new Date(Date.parse(new Date()) + 3 * 24 * 60 * 60 * 1000);
 //     }
+//     //alert(deadline);
+//   })();
+
+//   // получаю конечную дату отсчета
+//   function getTimeRemaining(endtime) {
+//     let t = Date.parse(endtime) - Date.parse(new Date());
+//     let seconds = Math.floor((t / 1000) % 60);
+//     let minutes = Math.floor((t / 1000 / 60) % 60);
+//     let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+//     let days = Math.floor(t / (1000 * 60 * 60 * 24));
+//     return {
+//       'total': t,
+//       'days': days,
+//       'hours': hours,
+//       'minutes': minutes,
+//       'seconds': seconds
+//     };
+//   }
+//   // закидываю данные в html документ
+
+//   function initializeClock(id, endtime) {
+//     let clock = document.getElementById(id);
+//     let daysSpan = clock.querySelector('.days');
+//     let hoursSpan = clock.querySelector('.hours');
+//     let minutesSpan = clock.querySelector('.minutes');
+//     let secondsSpan = clock.querySelector('.seconds');
+
+//     //   запускаю счетчик
+//     function updateClock() {
+
+//       let t = getTimeRemaining(endtime);
+
+//       daysSpan.innerHTML = ('0' + t.days);
+//       hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+//       minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+//       secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+//       //   если отсчет закончился - прибавляю еще нужное время
+//       if (t.total <= 0) {
+//         clearInterval(timeinterval);
+//         let deadline = new Date(Date.parse(new Date()) + 3 * 24 * 60 * 60 * 1000);
+//         initializeClock('countdown', deadline);
+//       }
+
+//     }
+
+//     //   записываю в localstorage дату окончания 
+//     localStorage.setItem("time", deadline.getTime());
+//     //alert(JSON.stringify(deadline));
+
+//     updateClock();
+//     let timeinterval = setInterval(updateClock, 1000);
 
 //   }
 
-//   updateClock();
-//   let timeinterval = setInterval(updateClock, 1000);
+//   initializeClock('countdown', deadline);
 // }
-
-// let deadline = new Date(Date.parse(new Date()) + 3 * 24 * 60 * 60 * 1000); // for endless timer
-// initializeClock('countdown', deadline);
+// timer()
 
 // modal
+
 function modal() {
 
   const openModalButtons = document.querySelectorAll('[data-modal-target]');
@@ -179,12 +222,23 @@ if ($(window).width() > 768) {
 } else {
   // Тут код для маленьких экранов
   $(".re-menu-column ul li").hide();
-  
+
   $(".re-menu-column h3").click(
     function () {
       $(".re-menu-column ul li").toggle('slow')
     }
   );
+
+  // categoryPage sidebar-filtr
+
+  $(".re-sidebar-filtr").hide();
+
+  $(".re-sidebar-help__btn button").click(
+    function () {
+      $(".re-sidebar-filtr").toggle('slow')
+    }
+  );
+
 }
 
 // card ptoduct description TABS
@@ -200,7 +254,7 @@ $('.re-btn').click(function () {
   content.addClass('active');
 });
 
-// сортировка по уене на странице category
+// сортировка по цене на странице category
 
 $('#re-category__sortBy').ready(function () {
   $("#re-down-price").hide();
@@ -222,26 +276,36 @@ $('.re-sidebar-filtr').ready(function () {
 
 // счетчик количества товара cart-page
 
-function addHandlers(count) {
+// function addHandlers(count) {
 
-  let minus = count.querySelector("#btnMinus");
-  let number = count.querySelector("#product-input");
-  let plus = count.querySelector("#btnPlus");
+//   let minus = count.querySelector("#btnMinus");
+//   let number = count.querySelector("#product-input");
+//   let plus = count.querySelector("#btnPlus");
 
-  plus.addEventListener("click", function () {
-    +number.value++;
-    if (number.value >= 1) {
-      minus.disabled = false;
-    }
+//   plus.addEventListener("click", function () {
+//     +number.value++;
+//     if (number.value >= 1) {
+//       minus.disabled = false;
+//     }
+//   });
+
+//   minus.addEventListener("click", function () {
+//     +number.value--;
+//     if (number.value == 1) {
+//       minus.disabled = true;
+//     }
+//   });
+// }
+
+// let counts = document.querySelectorAll(".re-order-product__count");
+// counts.forEach(addHandlers);
+
+
+// modal__arthboard
+
+$(document).mouseleave(function(){
+  $('.re-modal__arthboard, #re-overlay').addClass('active');
+  $('.close-button, #re-overlay').on('click', function(){
+    $('.re-modal__arthboard, #re-overlay').removeClass('active')
   });
-
-  minus.addEventListener("click", function () {
-    +number.value--;
-    if (number.value == 1) {
-      minus.disabled = true;
-    }
-  });
-}
-
-let counts = document.querySelectorAll(".re-order-product__count");
-counts.forEach(addHandlers);
+});

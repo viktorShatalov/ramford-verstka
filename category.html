@@ -15,19 +15,11 @@
     <!-- скрипт определения города -->
     <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
         type="text/javascript"></script>
-    <script type="text/javascript">
-        window.onload = function () {
-            $("#user-city,#user-city2").text(ymaps.geolocation.city);
-            $('.re-unswer a').click(function () {
-                $('.re-question').toggleClass('active');
-            });
-        }
-    </script>
 </head>
 
 <body>
     <!-- arthboard modal -->
-    <div class="re-modal__arthboard" id="re-modal__arthboard">
+    <div class="re-modal__arthboard " id="re-modal__arthboard">
         <button data-close-button class="close-button">&times;</button>
         <div class="re-modal-header">
             <div class="re-modal-title">
@@ -43,12 +35,12 @@
         <div class="re-modal-body">
             <form action="post" class="re-modal-form__arthboard">
                 <div class="re-form-input__modal">
-                    <input type="tel" placeholder="Телефон">
+                    <input type="tel" placeholder="+7">
                     <div class="social">
                         <a href="#"><input type="radio" checked name="social">По телефону</a href="#">
                         <a href="#"><input type="radio" name="social">В whats'ap, VIber и т.д.</a href="#">
                     </div>
-                    <input data-close-button type="button" value="Отправить">
+                    <input data-close-button type="submit" value="Отправить">
                 </div>
                 <div class="form-modal-description">
                     <p>
@@ -74,9 +66,9 @@
         <div class="re-modal-body">
             <form action="post" class="re-modal-form">
                 <div class="re-form-input__modal">
-                    <input type="text" placeholder="Имя">
+                    <input type="tel" placeholder="Имя">
                     <input type="tel" placeholder="Телефон">
-                    <input data-close-button type="button" value="Отправить">
+                    <input data-close-button type="submit" value="Отправить">
                 </div>
                 <div class="form-modal-description">
                     <p>
@@ -221,7 +213,7 @@
                     <div class="re-category-left__sidebar">
                         <div class="re-category-sidebar">
                             <div class="re-sidebar-help__btn">
-                                <button>Помощь в выборе</button>
+                                <button data-modal-target="#re-modal">Помощь в выборе</button>
                             </div>
                             <div class="re-sidebar-filtr">
                                 <ul class="re-filtr-items">

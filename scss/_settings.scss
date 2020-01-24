@@ -22,7 +22,7 @@ a.anim_btn:link:after, a.anim_btn:visited:after {
     @include a_after;
 }
 a.anim_btn:link:hover:after, a.anim_btn:visited:hover:after {
-    height: 500%;
+    height: 600%;
 }
 a.anim_btn:link:hover, a.anim_btn:visited:hover{
     color: $color_white;

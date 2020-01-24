@@ -11,6 +11,7 @@
     }
 }
 .re-order-product__item{
+    flex: 0 1 60%;
     @include dspFlex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +31,7 @@
     flex-wrap: nowrap;
 }
 .re-order-product__img{
-    margin-right: 50px;
+    margin: 0;
     img{
         width: 100%;
         max-width: 60px;
@@ -39,7 +40,7 @@
 }
 .re-order-product__name{
     width: 100%;
-    max-width: 340px;
+    max-width: 60%;
     p{
         font-size: 1.25em;
     }
@@ -82,10 +83,16 @@
     }
 }
 .re-order-product__orderSum{
-    margin: -20px 0 0;
-    p{
-        font-size: 2.125em;
-        margin-top: 5px;
+    border-radius: 5px;
+    padding: 10px 30px 10px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 180px;
+    text-align: end;
+    margin-right: 0;
+    p{  
+        font-size: 1.25em;
+        line-height: 25px;
     }
 }
 // section cart-order__form

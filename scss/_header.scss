@@ -1,6 +1,6 @@
 .re-header{
     position: sticky;
-    top: -41px;
+    top: -44px;
     z-index: 2;
 }
 
@@ -15,10 +15,10 @@
             margin: 0;
         }
         .re-payment,.re-credit{
-            margin: 8px 33px 14px 2px;
+            margin: 12px 33px 14px 2px;
         }
         .re-phone{
-            margin: 9px auto 14px;
+            margin: 12px auto 14px;
         }
     }
 }
@@ -26,13 +26,8 @@
     position: relative;
 }
 #user-city::before{
-    content: '';
-    position: absolute;
-    left: -20px;
-    top: 4px;
-    width: 7px;
-    height: 10px;
-    border: 1px solid $color_white;
+    content: url(../img/icon-lication.svg);
+    margin-right: 10px;
 }
 .re-location{
     position: relative;
@@ -43,7 +38,7 @@
         width: 290px;
         position: absolute;
         top: 40px;
-        left: -140px;
+        left: -120px;
         background-color: $color_location-modal;
         box-shadow: 0 3px 8px rgba(0,0,0,0.16);
         border-radius: 15px;
@@ -57,7 +52,7 @@
             margin: 0px 0 0 8px;
         }
         .re-unswer{
-            padding: 0 0 0 55px;
+            padding: 0 0 0 25px;
         }
         a{
             color: $color_link;
@@ -117,7 +112,7 @@
             }
             li:nth-child(1)::before{
                 content: url(../img/icon1.png);
-                margin: 0 ;
+                margin: 0 7px ;
             }
             li:nth-child(2)::before{
                 content: url(../img/icon2.png);

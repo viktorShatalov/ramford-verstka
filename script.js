@@ -100,76 +100,165 @@ $(document).ready(function () {
   })
 })
 
-// // timer
+// timer
 
-// function timer() {
-//   // получаю время начала отсчета
-//   let deadline;
 
-//   (function () {
-//     if (localStorage.getItem("time")) {
-//       deadline = new Date(Number(localStorage.getItem("time")));
-//     } else {
-//       deadline = new Date(Date.parse(new Date()) + 3 * 24 * 60 * 60 * 1000);
-//     }
-//     //alert(deadline);
-//   })();
 
-//   // получаю конечную дату отсчета
-//   function getTimeRemaining(endtime) {
-//     let t = Date.parse(endtime) - Date.parse(new Date());
-//     let seconds = Math.floor((t / 1000) % 60);
-//     let minutes = Math.floor((t / 1000 / 60) % 60);
-//     let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-//     let days = Math.floor(t / (1000 * 60 * 60 * 24));
-//     return {
-//       'total': t,
-//       'days': days,
-//       'hours': hours,
-//       'minutes': minutes,
-//       'seconds': seconds
-//     };
-//   }
-//   // закидываю данные в html документ
 
-//   function initializeClock(id, endtime) {
-//     let clock = document.getElementById(id);
-//     let daysSpan = clock.querySelector('.days');
-//     let hoursSpan = clock.querySelector('.hours');
-//     let minutesSpan = clock.querySelector('.minutes');
-//     let secondsSpan = clock.querySelector('.seconds');
+function timer() {
+  // получаю время начала отсчета
+  (function () {
+    const DAYS_SPECIAL_OFFER = 3; // Положительное число (или 0, если отключено). Специальное предложение в днях
+    const HOURS_SPECIAL_OFFER = 0; // Положительное число (или 0, если отключено). Специальное предложение в часах (работает если DAYS_SPECIAL_OFFER === 0)  
+    let deadline;
 
-//     //   запускаю счетчик
-//     function updateClock() {
+    //***
+    // Функции из библиотеки https://date-fns.org/ 
+    //***
 
-//       let t = getTimeRemaining(endtime);
+    const millisecondsInSecond = 1000;
+    const millisecondsInMinute = 60000;
+    const millisecondsInHour = 3600000;
+    const millisecondsInDay = 86400000;
 
-//       daysSpan.innerHTML = ('0' + t.days);
-//       hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-//       minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-//       secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-//       //   если отсчет закончился - прибавляю еще нужное время
-//       if (t.total <= 0) {
-//         clearInterval(timeinterval);
-//         let deadline = new Date(Date.parse(new Date()) + 3 * 24 * 60 * 60 * 1000);
-//         initializeClock('countdown', deadline);
-//       }
+    function addDays(dirtyDate, dirtyAmount) {
+      var date = dirtyDate;
+      var amount = Number(dirtyAmount);
+      date.setDate(date.getDate() + amount);
+      return date;
+    }
 
-//     }
+    function addMilliseconds(dirtyDate, dirtyAmount) {
+      var timestamp = dirtyDate.getTime();
+      var amount = Number(dirtyAmount);
+      return new Date(timestamp + amount);
+    }
 
-//     //   записываю в localstorage дату окончания 
-//     localStorage.setItem("time", deadline.getTime());
-//     //alert(JSON.stringify(deadline));
+    function addHours(dirtyDate, dirtyAmount) {
+      var amount = Number(dirtyAmount);
+      return addMilliseconds(dirtyDate, amount * millisecondsInHour);
+    }
 
-//     updateClock();
-//     let timeinterval = setInterval(updateClock, 1000);
+    function differenceInMilliseconds(dirtyDateLeft, dirtyDateRight) {
+      var dateLeft = dirtyDateLeft;
+      var dateRight = dirtyDateRight;
+      return dateLeft.getTime() - dateRight.getTime();
+    }
 
-//   }
+    function differenceInSeconds(dirtyDateLeft, dirtyDateRight) {
+      var diff = differenceInMilliseconds(dirtyDateLeft, dirtyDateRight) / millisecondsInSecond;
+      return diff > 0 ? Math.floor(diff) : Math.ceil(diff);
+    }
 
-//   initializeClock('countdown', deadline);
-// }
-// timer()
+    function differenceInMinutes(dirtyDateLeft, dirtyDateRight) {
+      var diff = differenceInMilliseconds(dirtyDateLeft, dirtyDateRight) / millisecondsInMinute;
+      return diff > 0 ? Math.floor(diff) : Math.ceil(diff);
+    }
+
+    function differenceInHours(dirtyDateLeft, dirtyDateRight) {
+      var diff = differenceInMilliseconds(dirtyDateLeft, dirtyDateRight) / millisecondsInHour;
+      return diff > 0 ? Math.floor(diff) : Math.ceil(diff);
+    }
+
+    function differenceInDays(dirtyDateLeft, dirtyDateRight) {
+      var diff = differenceInMilliseconds(dirtyDateLeft, dirtyDateRight) / millisecondsInDay;
+      return diff > 0 ? Math.floor(diff) : Math.ceil(diff);
+    }
+    //***
+
+
+    //***
+    // Константы времени  
+    //***  
+    const secondsInMinute = 60;
+    const minutesInHour = 60;
+    const hoursInDay = 24;
+    //***   
+
+    //***
+    // Начальная проверка localStorage
+    //***   
+
+    if (localStorage.getItem("time")) {
+      deadline = new Date(Number(localStorage.getItem("time")));
+    } else {
+      if (DAYS_SPECIAL_OFFER > 0) {
+        deadline = addDays(new Date(), DAYS_SPECIAL_OFFER);
+      } else if (HOURS_SPECIAL_OFFER > 0) {
+        deadline = addHours(new Date(), HOURS_SPECIAL_OFFER);
+      } else {
+        deadline = addDays(new Date(), 3);
+      }
+
+      localStorage.setItem("time", deadline.getTime());
+    }
+
+
+    // получаю конечную дату отсчета
+    function getTimeRemaining(endtime) {
+      let t = Date.parse(endtime) - Date.parse(new Date());
+
+      let seconds = differenceInSeconds(endtime, new Date()) % secondsInMinute;
+      let minutes = differenceInMinutes(endtime, new Date()) % minutesInHour;
+      let hours = differenceInHours(endtime, new Date()) % hoursInDay;
+      let days = differenceInDays(endtime, new Date());
+
+      return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+      };
+    }
+    // закидываю данные в html документ
+
+    function initializeClock(id, endtime) {
+      let timeinterval = setInterval(updateClock, 1000);
+      let clock = document.getElementById(id);
+      let daysSpan = clock.querySelector('.days');
+      let hoursSpan = clock.querySelector('.hours');
+      let minutesSpan = clock.querySelector('.minutes');
+      let secondsSpan = clock.querySelector('.seconds');
+
+      //   запускаю счетчик
+      function updateClock() {
+
+        let t = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = ('0' + t.days);
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        //   если отсчет закончился - прибавляю еще нужное время,
+        //   перезаписываю localStorage,
+        //   вызываю начальную функцию 
+        if (t.total <= 0) {
+          clearInterval(timeinterval);
+          if (DAYS_SPECIAL_OFFER > 0) {
+            deadline = addDays(new Date(), DAYS_SPECIAL_OFFER);
+          } else if (HOURS_SPECIAL_OFFER > 0) {
+            deadline = addHours(new Date(), HOURS_SPECIAL_OFFER);
+          } else {
+            deadline = addDays(new Date(), 3);
+          }
+          localStorage.setItem("time", deadline.getTime());
+          return initializeClock('countdown', deadline);
+        }
+
+
+      }
+
+      updateClock();
+
+    }
+
+    initializeClock('countdown', deadline);
+  })();
+}
+timer()
 
 // modal
 
@@ -308,11 +397,14 @@ $(document).ready(function () {
   let one = false;
 
   $(document).mouseleave(function () {
+    // проверяю переменную
     if (!one) {
+      // запускаю скрипт после проверки
       $('.re-modal__arthboard, #re-overlay').addClass('active');
       $('.close-button, #re-overlay').on('click', function () {
         $('.re-modal__arthboard, #re-overlay').removeClass('active')
       });
+      // меняю переменной значение на противоположное
       one = true
     }
   })
